@@ -1,0 +1,41 @@
+grammar ic.ac.uk.itl.ITL with org.eclipse.xtext.common.Terminals
+
+generate iTL "http://www.ac.ic/uk/itl/ITL"
+
+Model:
+	testing_tools += testing_tool*;
+	
+testing_tool:
+	Spider | W3af
+;
+	
+Spider:
+	'Spider' name=ID '{' zap_target= ZAP_TARGET ';' zap_address=ZAP_ADDRESS ';' zap_max_depth=ZAP_MAX_DEPTH ';' zap_api_key=ZAP_API_KEY (';'?) '}';
+	
+	
+ZAP_ADDRESS:
+	'ZAP_ADDRESS:' name=STRING;
+ZAP_MAX_DEPTH:
+	'ZAP_MAX_DEPTH:' name=STRING;
+ZAP_API_KEY:
+	'ZAP_API_KEY:' name=STRING;
+ZAP_TARGET:
+	'ZAP_TARGET:' name=STRING;
+	
+W3af:
+	'W3af' name =ID '{' w3af_test_type=W3AF_TEST_TYPE';' w3af_address=W3AF_ADDRESS';' w3af_report_path=W3AF_REPORT_ADDRESS';' w3af_target=W3AF_TARGET (';'?)'}';
+
+W3AF_REPORT_ADDRESS:
+	'W3AF_REPORT_ADDRESS:' name=STRING;
+
+
+W3AF_ADDRESS:
+	'W3AF_ADDRESS:' name=STRING;
+
+	
+W3AF_TEST_TYPE:
+	'W3AF_TEST_TYPE:' name=STRING;
+	
+W3AF_TARGET:
+	'W3AF_TARGET:' name=STRING;
+	
