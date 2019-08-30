@@ -13,7 +13,7 @@ import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 @FinalFieldsConstructor
 @SuppressWarnings("all")
 public class ITLUiModule extends AbstractITLUiModule {
-  public ITLUiModule(final AbstractUIPlugin plugin) {
-    super(plugin);
+  public ITLUiModule(final AbstractUIPlugin arg0) {
+    super(arg0);
   }
 }

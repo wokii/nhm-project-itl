@@ -87,7 +87,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Model createModel()
   {
     ModelImpl model = new ModelImpl();
@@ -99,7 +98,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public testing_tool createtesting_tool()
   {
     testing_toolImpl testing_tool = new testing_toolImpl();
@@ -111,7 +109,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public Spider createSpider()
   {
     SpiderImpl spider = new SpiderImpl();
@@ -123,7 +120,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_ADDRESS createZAP_ADDRESS()
   {
     ZAP_ADDRESSImpl zaP_ADDRESS = new ZAP_ADDRESSImpl();
@@ -135,7 +131,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_MAX_DEPTH createZAP_MAX_DEPTH()
   {
     ZAP_MAX_DEPTHImpl zaP_MAX_DEPTH = new ZAP_MAX_DEPTHImpl();
@@ -147,7 +142,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_API_KEY createZAP_API_KEY()
   {
     ZAP_API_KEYImpl zaP_API_KEY = new ZAP_API_KEYImpl();
@@ -159,7 +153,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_TARGET createZAP_TARGET()
   {
     ZAP_TARGETImpl zaP_TARGET = new ZAP_TARGETImpl();
@@ -171,7 +164,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3af createW3af()
   {
     W3afImpl w3af = new W3afImpl();
@@ -183,7 +175,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_REPORT_ADDRESS createW3AF_REPORT_ADDRESS()
   {
     W3AF_REPORT_ADDRESSImpl w3AF_REPORT_ADDRESS = new W3AF_REPORT_ADDRESSImpl();
@@ -195,7 +186,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_ADDRESS createW3AF_ADDRESS()
   {
     W3AF_ADDRESSImpl w3AF_ADDRESS = new W3AF_ADDRESSImpl();
@@ -207,7 +197,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_TEST_TYPE createW3AF_TEST_TYPE()
   {
     W3AF_TEST_TYPEImpl w3AF_TEST_TYPE = new W3AF_TEST_TYPEImpl();
@@ -219,7 +208,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_TARGET createW3AF_TARGET()
   {
     W3AF_TARGETImpl w3AF_TARGET = new W3AF_TARGETImpl();
@@ -231,7 +219,6 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ITLPackage getITLPackage()
   {
     return (ITLPackage)getEPackage();

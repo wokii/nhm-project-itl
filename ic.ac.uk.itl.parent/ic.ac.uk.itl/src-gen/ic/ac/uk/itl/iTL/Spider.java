@@ -28,6 +28,10 @@ public interface Spider extends testing_tool
   /**
    * Returns the value of the '<em><b>Zap target</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Zap target</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Zap target</em>' containment reference.
    * @see #setZap_target(ZAP_TARGET)
@@ -50,6 +54,10 @@ public interface Spider extends testing_tool
   /**
    * Returns the value of the '<em><b>Zap address</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Zap address</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Zap address</em>' containment reference.
    * @see #setZap_address(ZAP_ADDRESS)
@@ -72,6 +80,10 @@ public interface Spider extends testing_tool
   /**
    * Returns the value of the '<em><b>Zap max depth</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Zap max depth</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Zap max depth</em>' containment reference.
    * @see #setZap_max_depth(ZAP_MAX_DEPTH)
@@ -94,6 +106,10 @@ public interface Spider extends testing_tool
   /**
    * Returns the value of the '<em><b>Zap api key</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Zap api key</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Zap api key</em>' containment reference.
    * @see #setZap_api_key(ZAP_API_KEY)

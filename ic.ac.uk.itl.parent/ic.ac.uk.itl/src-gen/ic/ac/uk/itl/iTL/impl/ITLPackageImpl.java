@@ -138,7 +138,7 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   *
+   * 
    * <p>This method is used to initialize {@link ITLPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -153,8 +153,7 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
     if (isInited) return (ITLPackage)EPackage.Registry.INSTANCE.getEPackage(ITLPackage.eNS_URI);
 
     // Obtain or create and register package
-    Object registeredITLPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-    ITLPackageImpl theITLPackage = registeredITLPackage instanceof ITLPackageImpl ? (ITLPackageImpl)registeredITLPackage : new ITLPackageImpl();
+    ITLPackageImpl theITLPackage = (ITLPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ITLPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ITLPackageImpl());
 
     isInited = true;
 
@@ -167,6 +166,7 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
     // Mark meta-data to indicate it can't be changed
     theITLPackage.freeze();
 
+  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(ITLPackage.eNS_URI, theITLPackage);
     return theITLPackage;
@@ -177,7 +177,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getModel()
   {
     return modelEClass;
@@ -188,7 +187,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getModel_Testing_tools()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
@@ -199,7 +197,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass gettesting_tool()
   {
     return testing_toolEClass;
@@ -210,7 +207,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute gettesting_tool_Name()
   {
     return (EAttribute)testing_toolEClass.getEStructuralFeatures().get(0);
@@ -221,7 +217,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getSpider()
   {
     return spiderEClass;
@@ -232,7 +227,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSpider_Zap_target()
   {
     return (EReference)spiderEClass.getEStructuralFeatures().get(0);
@@ -243,7 +237,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSpider_Zap_address()
   {
     return (EReference)spiderEClass.getEStructuralFeatures().get(1);
@@ -254,7 +247,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSpider_Zap_max_depth()
   {
     return (EReference)spiderEClass.getEStructuralFeatures().get(2);
@@ -265,7 +257,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getSpider_Zap_api_key()
   {
     return (EReference)spiderEClass.getEStructuralFeatures().get(3);
@@ -276,7 +267,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getZAP_ADDRESS()
   {
     return zaP_ADDRESSEClass;
@@ -287,7 +277,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getZAP_ADDRESS_Name()
   {
     return (EAttribute)zaP_ADDRESSEClass.getEStructuralFeatures().get(0);
@@ -298,7 +287,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getZAP_MAX_DEPTH()
   {
     return zaP_MAX_DEPTHEClass;
@@ -309,7 +297,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getZAP_MAX_DEPTH_Name()
   {
     return (EAttribute)zaP_MAX_DEPTHEClass.getEStructuralFeatures().get(0);
@@ -320,7 +307,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getZAP_API_KEY()
   {
     return zaP_API_KEYEClass;
@@ -331,7 +317,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getZAP_API_KEY_Name()
   {
     return (EAttribute)zaP_API_KEYEClass.getEStructuralFeatures().get(0);
@@ -342,7 +327,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getZAP_TARGET()
   {
     return zaP_TARGETEClass;
@@ -353,7 +337,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getZAP_TARGET_Name()
   {
     return (EAttribute)zaP_TARGETEClass.getEStructuralFeatures().get(0);
@@ -364,7 +347,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getW3af()
   {
     return w3afEClass;
@@ -375,7 +357,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getW3af_W3af_test_type()
   {
     return (EReference)w3afEClass.getEStructuralFeatures().get(0);
@@ -386,7 +367,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getW3af_W3af_address()
   {
     return (EReference)w3afEClass.getEStructuralFeatures().get(1);
@@ -397,7 +377,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getW3af_W3af_report_path()
   {
     return (EReference)w3afEClass.getEStructuralFeatures().get(2);
@@ -408,7 +387,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EReference getW3af_W3af_target()
   {
     return (EReference)w3afEClass.getEStructuralFeatures().get(3);
@@ -419,7 +397,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getW3AF_REPORT_ADDRESS()
   {
     return w3AF_REPORT_ADDRESSEClass;
@@ -430,7 +407,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getW3AF_REPORT_ADDRESS_Name()
   {
     return (EAttribute)w3AF_REPORT_ADDRESSEClass.getEStructuralFeatures().get(0);
@@ -441,7 +417,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getW3AF_ADDRESS()
   {
     return w3AF_ADDRESSEClass;
@@ -452,7 +427,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getW3AF_ADDRESS_Name()
   {
     return (EAttribute)w3AF_ADDRESSEClass.getEStructuralFeatures().get(0);
@@ -463,7 +437,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getW3AF_TEST_TYPE()
   {
     return w3AF_TEST_TYPEEClass;
@@ -474,7 +447,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getW3AF_TEST_TYPE_Name()
   {
     return (EAttribute)w3AF_TEST_TYPEEClass.getEStructuralFeatures().get(0);
@@ -485,7 +457,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EClass getW3AF_TARGET()
   {
     return w3AF_TARGETEClass;
@@ -496,7 +467,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EAttribute getW3AF_TARGET_Name()
   {
     return (EAttribute)w3AF_TARGETEClass.getEStructuralFeatures().get(0);
@@ -507,7 +477,6 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ITLFactory getITLFactory()
   {
     return (ITLFactory)getEFactoryInstance();

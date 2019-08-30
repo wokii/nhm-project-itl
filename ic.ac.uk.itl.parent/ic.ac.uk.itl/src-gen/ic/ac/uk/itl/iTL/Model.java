@@ -29,6 +29,10 @@ public interface Model extends EObject
    * Returns the value of the '<em><b>Testing tools</b></em>' containment reference list.
    * The list contents are of type {@link ic.ac.uk.itl.iTL.testing_tool}.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Testing tools</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Testing tools</em>' containment reference list.
    * @see ic.ac.uk.itl.iTL.ITLPackage#getModel_Testing_tools()

@@ -102,7 +102,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_TARGET getZap_target()
   {
     return zap_target;
@@ -130,7 +129,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setZap_target(ZAP_TARGET newZap_target)
   {
     if (newZap_target != zap_target)
@@ -152,7 +150,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_ADDRESS getZap_address()
   {
     return zap_address;
@@ -180,7 +177,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setZap_address(ZAP_ADDRESS newZap_address)
   {
     if (newZap_address != zap_address)
@@ -202,7 +198,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_MAX_DEPTH getZap_max_depth()
   {
     return zap_max_depth;
@@ -230,7 +225,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setZap_max_depth(ZAP_MAX_DEPTH newZap_max_depth)
   {
     if (newZap_max_depth != zap_max_depth)
@@ -252,7 +246,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public ZAP_API_KEY getZap_api_key()
   {
     return zap_api_key;
@@ -280,7 +273,6 @@ public class SpiderImpl extends testing_toolImpl implements Spider
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setZap_api_key(ZAP_API_KEY newZap_api_key)
   {
     if (newZap_api_key != zap_api_key)

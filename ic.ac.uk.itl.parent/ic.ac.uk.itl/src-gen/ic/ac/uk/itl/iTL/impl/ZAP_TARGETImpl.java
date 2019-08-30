@@ -74,7 +74,6 @@ public class ZAP_TARGETImpl extends MinimalEObjectImpl.Container implements ZAP_
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public String getName()
   {
     return name;
@@ -85,7 +84,6 @@ public class ZAP_TARGETImpl extends MinimalEObjectImpl.Container implements ZAP_
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setName(String newName)
   {
     String oldName = name;
@@ -170,7 +168,7 @@ public class ZAP_TARGETImpl extends MinimalEObjectImpl.Container implements ZAP_
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
+    StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
     result.append(')');

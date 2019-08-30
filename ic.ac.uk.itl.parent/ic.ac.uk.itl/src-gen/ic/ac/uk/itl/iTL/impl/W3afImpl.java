@@ -102,7 +102,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_TEST_TYPE getW3af_test_type()
   {
     return w3af_test_type;
@@ -130,7 +129,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setW3af_test_type(W3AF_TEST_TYPE newW3af_test_type)
   {
     if (newW3af_test_type != w3af_test_type)
@@ -152,7 +150,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_ADDRESS getW3af_address()
   {
     return w3af_address;
@@ -180,7 +177,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setW3af_address(W3AF_ADDRESS newW3af_address)
   {
     if (newW3af_address != w3af_address)
@@ -202,7 +198,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_REPORT_ADDRESS getW3af_report_path()
   {
     return w3af_report_path;
@@ -230,7 +225,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setW3af_report_path(W3AF_REPORT_ADDRESS newW3af_report_path)
   {
     if (newW3af_report_path != w3af_report_path)
@@ -252,7 +246,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public W3AF_TARGET getW3af_target()
   {
     return w3af_target;
@@ -280,7 +273,6 @@ public class W3afImpl extends testing_toolImpl implements W3af
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public void setW3af_target(W3AF_TARGET newW3af_target)
   {
     if (newW3af_target != w3af_target)

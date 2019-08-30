@@ -28,6 +28,10 @@ public interface W3af extends testing_tool
   /**
    * Returns the value of the '<em><b>W3af test type</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>W3af test type</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>W3af test type</em>' containment reference.
    * @see #setW3af_test_type(W3AF_TEST_TYPE)
@@ -50,6 +54,10 @@ public interface W3af extends testing_tool
   /**
    * Returns the value of the '<em><b>W3af address</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>W3af address</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>W3af address</em>' containment reference.
    * @see #setW3af_address(W3AF_ADDRESS)
@@ -72,6 +80,10 @@ public interface W3af extends testing_tool
   /**
    * Returns the value of the '<em><b>W3af report path</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>W3af report path</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>W3af report path</em>' containment reference.
    * @see #setW3af_report_path(W3AF_REPORT_ADDRESS)
@@ -94,6 +106,10 @@ public interface W3af extends testing_tool
   /**
    * Returns the value of the '<em><b>W3af target</b></em>' containment reference.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>W3af target</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>W3af target</em>' containment reference.
    * @see #setW3af_target(W3AF_TARGET)

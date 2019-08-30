@@ -72,7 +72,6 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
   public EList<testing_tool> getTesting_tools()
   {
     if (testing_tools == null)
