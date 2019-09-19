@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='ic.ac.uk.itl.ui' version='1.0.0.201908292252' generation='2'>
-    <update id='ic.ac.uk.itl.ui' range='[0.0.0,1.0.0.201908292252)' severity='0'/>
+  <unit id='ic.ac.uk.itl.ui' version='1.0.0.201909091851' generation='2'>
+    <update id='ic.ac.uk.itl.ui' range='[0.0.0,1.0.0.201909091851)' severity='0'/>
     <properties size='5'>
       <property name='org.eclipse.equinox.p2.name' value='ic.ac.uk.itl.ui'/>
       <property name='org.eclipse.equinox.p2.provider' value='My Company'/>
@@ -10,12 +10,12 @@
       <property name='maven-version' value='1.0.0-SNAPSHOT'/>
     </properties>
     <provides size='7'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='ic.ac.uk.itl.ui' version='1.0.0.201908292252'/>
-      <provided namespace='osgi.bundle' name='ic.ac.uk.itl.ui' version='1.0.0.201908292252'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='ic.ac.uk.itl.ui' version='1.0.0.201909091851'/>
+      <provided namespace='osgi.bundle' name='ic.ac.uk.itl.ui' version='1.0.0.201909091851'/>
       <provided namespace='java.package' name='ic.ac.uk.itl.ui.quickfix' version='0.0.0'/>
       <provided namespace='java.package' name='ic.ac.uk.itl.ui.contentassist' version='0.0.0'/>
       <provided namespace='java.package' name='ic.ac.uk.itl.ui.internal' version='0.0.0'/>
-      <provided namespace='osgi.identity' name='ic.ac.uk.itl.ui' version='1.0.0.201908292252'>
+      <provided namespace='osgi.identity' name='ic.ac.uk.itl.ui' version='1.0.0.201909091851'>
         <properties size='1'>
           <property name='type' value='osgi.bundle'/>
         </properties>
@@ -39,13 +39,13 @@
       <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=11))'/>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='ic.ac.uk.itl.ui' version='1.0.0.201908292252'/>
+      <artifact classifier='osgi.bundle' id='ic.ac.uk.itl.ui' version='1.0.0.201909091851'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: ic.ac.uk.itl.ui; singleton:=true&#xA;Bundle-Version: 1.0.0.201908292252&#xA;
+          Bundle-SymbolicName: ic.ac.uk.itl.ui; singleton:=true&#xA;Bundle-Version: 1.0.0.201909091851&#xA;
         </instruction>
       </instructions>
     </touchpointData>

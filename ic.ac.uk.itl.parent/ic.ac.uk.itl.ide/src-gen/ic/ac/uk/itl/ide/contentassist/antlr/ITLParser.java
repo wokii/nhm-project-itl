@@ -32,7 +32,7 @@ public class ITLParser extends AbstractContentAssistParser {
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, ITLGrammarAccess grammarAccess) {
 			builder.put(grammarAccess.getTesting_toolAccess().getAlternatives(), "rule__Testing_tool__Alternatives");
-			builder.put(grammarAccess.getSpiderAccess().getGroup(), "rule__Spider__Group__0");
+			builder.put(grammarAccess.getZAPAccess().getGroup(), "rule__ZAP__Group__0");
 			builder.put(grammarAccess.getZAP_ADDRESSAccess().getGroup(), "rule__ZAP_ADDRESS__Group__0");
 			builder.put(grammarAccess.getZAP_MAX_DEPTHAccess().getGroup(), "rule__ZAP_MAX_DEPTH__Group__0");
 			builder.put(grammarAccess.getZAP_API_KEYAccess().getGroup(), "rule__ZAP_API_KEY__Group__0");
@@ -43,11 +43,11 @@ public class ITLParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getW3AF_TEST_TYPEAccess().getGroup(), "rule__W3AF_TEST_TYPE__Group__0");
 			builder.put(grammarAccess.getW3AF_TARGETAccess().getGroup(), "rule__W3AF_TARGET__Group__0");
 			builder.put(grammarAccess.getModelAccess().getTesting_toolsAssignment(), "rule__Model__Testing_toolsAssignment");
-			builder.put(grammarAccess.getSpiderAccess().getNameAssignment_1(), "rule__Spider__NameAssignment_1");
-			builder.put(grammarAccess.getSpiderAccess().getZap_targetAssignment_3(), "rule__Spider__Zap_targetAssignment_3");
-			builder.put(grammarAccess.getSpiderAccess().getZap_addressAssignment_5(), "rule__Spider__Zap_addressAssignment_5");
-			builder.put(grammarAccess.getSpiderAccess().getZap_max_depthAssignment_7(), "rule__Spider__Zap_max_depthAssignment_7");
-			builder.put(grammarAccess.getSpiderAccess().getZap_api_keyAssignment_9(), "rule__Spider__Zap_api_keyAssignment_9");
+			builder.put(grammarAccess.getZAPAccess().getNameAssignment_1(), "rule__ZAP__NameAssignment_1");
+			builder.put(grammarAccess.getZAPAccess().getZap_targetAssignment_3(), "rule__ZAP__Zap_targetAssignment_3");
+			builder.put(grammarAccess.getZAPAccess().getZap_addressAssignment_5(), "rule__ZAP__Zap_addressAssignment_5");
+			builder.put(grammarAccess.getZAPAccess().getZap_max_depthAssignment_7(), "rule__ZAP__Zap_max_depthAssignment_7");
+			builder.put(grammarAccess.getZAPAccess().getZap_api_keyAssignment_9(), "rule__ZAP__Zap_api_keyAssignment_9");
 			builder.put(grammarAccess.getZAP_ADDRESSAccess().getNameAssignment_1(), "rule__ZAP_ADDRESS__NameAssignment_1");
 			builder.put(grammarAccess.getZAP_MAX_DEPTHAccess().getNameAssignment_1(), "rule__ZAP_MAX_DEPTH__NameAssignment_1");
 			builder.put(grammarAccess.getZAP_API_KEYAccess().getNameAssignment_1(), "rule__ZAP_API_KEY__NameAssignment_1");

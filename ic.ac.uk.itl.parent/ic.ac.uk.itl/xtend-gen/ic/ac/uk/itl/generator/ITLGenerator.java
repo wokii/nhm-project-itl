@@ -4,8 +4,8 @@
 package ic.ac.uk.itl.generator;
 
 import com.google.common.collect.Iterables;
-import ic.ac.uk.itl.iTL.Spider;
 import ic.ac.uk.itl.iTL.W3af;
+import ic.ac.uk.itl.iTL.ZAP;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -30,8 +30,8 @@ public class ITLGenerator extends AbstractGenerator {
     String zap_result = "";
     String zap_filename = "";
     String zap_file_path = "";
-    Iterable<Spider> _filter = Iterables.<Spider>filter(IteratorExtensions.<EObject>toIterable(resource.getAllContents()), Spider.class);
-    for (final Spider spider : _filter) {
+    Iterable<ZAP> _filter = Iterables.<ZAP>filter(IteratorExtensions.<EObject>toIterable(resource.getAllContents()), ZAP.class);
+    for (final ZAP spider : _filter) {
       {
         zap_filename = spider.getName();
         zap_result = this.compile(spider).toString();
@@ -77,7 +77,7 @@ public class ITLGenerator extends AbstractGenerator {
     }
   }
   
-  public CharSequence compile(final Spider spider) {
+  public CharSequence compile(final ZAP spider) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("#!/usr/bin/env python");
     _builder.newLine();
@@ -127,6 +127,7 @@ public class ITLGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("print(\'Spidering target {}\'.format(target))");
     _builder.newLine();
+    _builder.newLine();
     _builder.append("scanid = zap.spider.scan(target)");
     _builder.newLine();
     _builder.append("zap.spider.set_option_max_depth(");
@@ -134,6 +135,7 @@ public class ITLGenerator extends AbstractGenerator {
     _builder.append(_name_2);
     _builder.append(")");
     _builder.newLineIfNotEmpty();
+    _builder.newLine();
     _builder.append("# Give the Spider a chance to start");
     _builder.newLine();
     _builder.append("time.sleep(2)");
@@ -217,10 +219,23 @@ public class ITLGenerator extends AbstractGenerator {
     _builder.newLine();
     _builder.append("back");
     _builder.newLine();
-    _builder.newLine();
     {
-      boolean _contains = w3af.getW3af_test_type().getName().contains("audit");
+      boolean _contains = w3af.getW3af_test_type().getName().contains("crawl");
       if (_contains) {
+        _builder.append("crawl web_spider");
+        _builder.newLine();
+        _builder.append("crawl config web_spider");
+        _builder.newLine();
+        _builder.append("set only_forward true");
+        _builder.newLine();
+        _builder.append("back");
+        _builder.newLine();
+        _builder.newLine();
+      }
+    }
+    {
+      boolean _contains_1 = w3af.getW3af_test_type().getName().contains("audit");
+      if (_contains_1) {
         _builder.append("audit all");
         _builder.newLine();
         _builder.append("audit");
@@ -228,8 +243,8 @@ public class ITLGenerator extends AbstractGenerator {
       }
     }
     {
-      boolean _contains_1 = w3af.getW3af_test_type().getName().contains("evasion");
-      if (_contains_1) {
+      boolean _contains_2 = w3af.getW3af_test_type().getName().contains("evasion");
+      if (_contains_2) {
         _builder.append("evasion all");
         _builder.newLine();
         _builder.append("evasion");
@@ -237,8 +252,8 @@ public class ITLGenerator extends AbstractGenerator {
       }
     }
     {
-      boolean _contains_2 = w3af.getW3af_test_type().getName().contains("auth");
-      if (_contains_2) {
+      boolean _contains_3 = w3af.getW3af_test_type().getName().contains("auth");
+      if (_contains_3) {
         _builder.append("auth all");
         _builder.newLine();
         _builder.append("auth");
@@ -246,23 +261,15 @@ public class ITLGenerator extends AbstractGenerator {
       }
     }
     {
-      boolean _contains_3 = w3af.getW3af_test_type().getName().contains("bruteforce");
-      if (_contains_3) {
+      boolean _contains_4 = w3af.getW3af_test_type().getName().contains("bruteforce");
+      if (_contains_4) {
         _builder.append("bruteforce all");
         _builder.newLine();
-        _builder.append("audit");
+        _builder.append("bruteforce");
         _builder.newLine();
       }
     }
-    {
-      boolean _contains_4 = w3af.getW3af_test_type().getName().contains("crawl");
-      if (_contains_4) {
-        _builder.append("crawl all");
-        _builder.newLine();
-        _builder.append("crawl");
-        _builder.newLine();
-      }
-    }
+    _builder.newLine();
     _builder.append("\t\t");
     _builder.newLine();
     _builder.append("back");

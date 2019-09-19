@@ -114,14 +114,14 @@ public interface ITLPackage extends EPackage
   int TESTING_TOOL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link ic.ac.uk.itl.iTL.impl.SpiderImpl <em>Spider</em>}' class.
+   * The meta object id for the '{@link ic.ac.uk.itl.iTL.impl.ZAPImpl <em>ZAP</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see ic.ac.uk.itl.iTL.impl.SpiderImpl
-   * @see ic.ac.uk.itl.iTL.impl.ITLPackageImpl#getSpider()
+   * @see ic.ac.uk.itl.iTL.impl.ZAPImpl
+   * @see ic.ac.uk.itl.iTL.impl.ITLPackageImpl#getZAP()
    * @generated
    */
-  int SPIDER = 2;
+  int ZAP = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -130,7 +130,7 @@ public interface ITLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPIDER__NAME = TESTING_TOOL__NAME;
+  int ZAP__NAME = TESTING_TOOL__NAME;
 
   /**
    * The feature id for the '<em><b>Zap target</b></em>' containment reference.
@@ -139,7 +139,7 @@ public interface ITLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPIDER__ZAP_TARGET = TESTING_TOOL_FEATURE_COUNT + 0;
+  int ZAP__ZAP_TARGET = TESTING_TOOL_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Zap address</b></em>' containment reference.
@@ -148,7 +148,7 @@ public interface ITLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPIDER__ZAP_ADDRESS = TESTING_TOOL_FEATURE_COUNT + 1;
+  int ZAP__ZAP_ADDRESS = TESTING_TOOL_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Zap max depth</b></em>' containment reference.
@@ -157,7 +157,7 @@ public interface ITLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPIDER__ZAP_MAX_DEPTH = TESTING_TOOL_FEATURE_COUNT + 2;
+  int ZAP__ZAP_MAX_DEPTH = TESTING_TOOL_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Zap api key</b></em>' containment reference.
@@ -166,16 +166,16 @@ public interface ITLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPIDER__ZAP_API_KEY = TESTING_TOOL_FEATURE_COUNT + 3;
+  int ZAP__ZAP_API_KEY = TESTING_TOOL_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>Spider</em>' class.
+   * The number of structural features of the '<em>ZAP</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SPIDER_FEATURE_COUNT = TESTING_TOOL_FEATURE_COUNT + 4;
+  int ZAP_FEATURE_COUNT = TESTING_TOOL_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link ic.ac.uk.itl.iTL.impl.ZAP_ADDRESSImpl <em>ZAP ADDRESS</em>}' class.
@@ -509,58 +509,58 @@ public interface ITLPackage extends EPackage
   EAttribute gettesting_tool_Name();
 
   /**
-   * Returns the meta object for class '{@link ic.ac.uk.itl.iTL.Spider <em>Spider</em>}'.
+   * Returns the meta object for class '{@link ic.ac.uk.itl.iTL.ZAP <em>ZAP</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Spider</em>'.
-   * @see ic.ac.uk.itl.iTL.Spider
+   * @return the meta object for class '<em>ZAP</em>'.
+   * @see ic.ac.uk.itl.iTL.ZAP
    * @generated
    */
-  EClass getSpider();
+  EClass getZAP();
 
   /**
-   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.Spider#getZap_target <em>Zap target</em>}'.
+   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.ZAP#getZap_target <em>Zap target</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Zap target</em>'.
-   * @see ic.ac.uk.itl.iTL.Spider#getZap_target()
-   * @see #getSpider()
+   * @see ic.ac.uk.itl.iTL.ZAP#getZap_target()
+   * @see #getZAP()
    * @generated
    */
-  EReference getSpider_Zap_target();
+  EReference getZAP_Zap_target();
 
   /**
-   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.Spider#getZap_address <em>Zap address</em>}'.
+   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.ZAP#getZap_address <em>Zap address</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Zap address</em>'.
-   * @see ic.ac.uk.itl.iTL.Spider#getZap_address()
-   * @see #getSpider()
+   * @see ic.ac.uk.itl.iTL.ZAP#getZap_address()
+   * @see #getZAP()
    * @generated
    */
-  EReference getSpider_Zap_address();
+  EReference getZAP_Zap_address();
 
   /**
-   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.Spider#getZap_max_depth <em>Zap max depth</em>}'.
+   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.ZAP#getZap_max_depth <em>Zap max depth</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Zap max depth</em>'.
-   * @see ic.ac.uk.itl.iTL.Spider#getZap_max_depth()
-   * @see #getSpider()
+   * @see ic.ac.uk.itl.iTL.ZAP#getZap_max_depth()
+   * @see #getZAP()
    * @generated
    */
-  EReference getSpider_Zap_max_depth();
+  EReference getZAP_Zap_max_depth();
 
   /**
-   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.Spider#getZap_api_key <em>Zap api key</em>}'.
+   * Returns the meta object for the containment reference '{@link ic.ac.uk.itl.iTL.ZAP#getZap_api_key <em>Zap api key</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Zap api key</em>'.
-   * @see ic.ac.uk.itl.iTL.Spider#getZap_api_key()
-   * @see #getSpider()
+   * @see ic.ac.uk.itl.iTL.ZAP#getZap_api_key()
+   * @see #getZAP()
    * @generated
    */
-  EReference getSpider_Zap_api_key();
+  EReference getZAP_Zap_api_key();
 
   /**
    * Returns the meta object for class '{@link ic.ac.uk.itl.iTL.ZAP_ADDRESS <em>ZAP ADDRESS</em>}'.
@@ -844,14 +844,14 @@ public interface ITLPackage extends EPackage
     EAttribute TESTING_TOOL__NAME = eINSTANCE.gettesting_tool_Name();
 
     /**
-     * The meta object literal for the '{@link ic.ac.uk.itl.iTL.impl.SpiderImpl <em>Spider</em>}' class.
+     * The meta object literal for the '{@link ic.ac.uk.itl.iTL.impl.ZAPImpl <em>ZAP</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see ic.ac.uk.itl.iTL.impl.SpiderImpl
-     * @see ic.ac.uk.itl.iTL.impl.ITLPackageImpl#getSpider()
+     * @see ic.ac.uk.itl.iTL.impl.ZAPImpl
+     * @see ic.ac.uk.itl.iTL.impl.ITLPackageImpl#getZAP()
      * @generated
      */
-    EClass SPIDER = eINSTANCE.getSpider();
+    EClass ZAP = eINSTANCE.getZAP();
 
     /**
      * The meta object literal for the '<em><b>Zap target</b></em>' containment reference feature.
@@ -859,7 +859,7 @@ public interface ITLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SPIDER__ZAP_TARGET = eINSTANCE.getSpider_Zap_target();
+    EReference ZAP__ZAP_TARGET = eINSTANCE.getZAP_Zap_target();
 
     /**
      * The meta object literal for the '<em><b>Zap address</b></em>' containment reference feature.
@@ -867,7 +867,7 @@ public interface ITLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SPIDER__ZAP_ADDRESS = eINSTANCE.getSpider_Zap_address();
+    EReference ZAP__ZAP_ADDRESS = eINSTANCE.getZAP_Zap_address();
 
     /**
      * The meta object literal for the '<em><b>Zap max depth</b></em>' containment reference feature.
@@ -875,7 +875,7 @@ public interface ITLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SPIDER__ZAP_MAX_DEPTH = eINSTANCE.getSpider_Zap_max_depth();
+    EReference ZAP__ZAP_MAX_DEPTH = eINSTANCE.getZAP_Zap_max_depth();
 
     /**
      * The meta object literal for the '<em><b>Zap api key</b></em>' containment reference feature.
@@ -883,7 +883,7 @@ public interface ITLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SPIDER__ZAP_API_KEY = eINSTANCE.getSpider_Zap_api_key();
+    EReference ZAP__ZAP_API_KEY = eINSTANCE.getZAP_Zap_api_key();
 
     /**
      * The meta object literal for the '{@link ic.ac.uk.itl.iTL.impl.ZAP_ADDRESSImpl <em>ZAP ADDRESS</em>}' class.

@@ -87,11 +87,11 @@ public class ITLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ITLPackage.SPIDER:
+      case ITLPackage.ZAP:
       {
-        Spider spider = (Spider)theEObject;
-        T result = caseSpider(spider);
-        if (result == null) result = casetesting_tool(spider);
+        ZAP zap = (ZAP)theEObject;
+        T result = caseZAP(zap);
+        if (result == null) result = casetesting_tool(zap);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -196,17 +196,17 @@ public class ITLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Spider</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>ZAP</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Spider</em>'.
+   * @return the result of interpreting the object as an instance of '<em>ZAP</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSpider(Spider object)
+  public T caseZAP(ZAP object)
   {
     return null;
   }

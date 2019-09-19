@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ic.ac.uk.itl.tests.ITLParsingTest" time="2.457" tests="5" errors="0" skipped="0" failures="0">
+  <properties/>
+  <testcase name="testGenerator2" classname="ic.ac.uk.itl.tests.ITLParsingTest" time="2.4"/>
+  <testcase name="loadModel1" classname="ic.ac.uk.itl.tests.ITLParsingTest" time="0.017"/>
+  <testcase name="loadModel2" classname="ic.ac.uk.itl.tests.ITLParsingTest" time="0.007"/>
+  <testcase name="both" classname="ic.ac.uk.itl.tests.ITLParsingTest" time="0.009"/>
+  <testcase name="testGenerator" classname="ic.ac.uk.itl.tests.ITLParsingTest" time="0.011"/>
+</testsuite>

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalITLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Spider'", "'{'", "';'", "'}'", "'ZAP_ADDRESS:'", "'ZAP_MAX_DEPTH:'", "'ZAP_API_KEY:'", "'ZAP_TARGET:'", "'W3af'", "'W3AF_REPORT_ADDRESS:'", "'W3AF_ADDRESS:'", "'W3AF_TEST_TYPE:'", "'W3AF_TARGET:'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'ZAP'", "'{'", "';'", "'}'", "'ZAP_ADDRESS:'", "'ZAP_MAX_DEPTH:'", "'ZAP_API_KEY:'", "'ZAP_TARGET:'", "'W3af'", "'W3AF_REPORT_ADDRESS:'", "'W3AF_ADDRESS:'", "'W3AF_TEST_TYPE:'", "'W3AF_TARGET:'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -253,20 +253,20 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruletesting_tool"
 
 
-    // $ANTLR start "entryRuleSpider"
-    // InternalITL.g:103:1: entryRuleSpider : ruleSpider EOF ;
-    public final void entryRuleSpider() throws RecognitionException {
+    // $ANTLR start "entryRuleZAP"
+    // InternalITL.g:103:1: entryRuleZAP : ruleZAP EOF ;
+    public final void entryRuleZAP() throws RecognitionException {
         try {
-            // InternalITL.g:104:1: ( ruleSpider EOF )
-            // InternalITL.g:105:1: ruleSpider EOF
+            // InternalITL.g:104:1: ( ruleZAP EOF )
+            // InternalITL.g:105:1: ruleZAP EOF
             {
-             before(grammarAccess.getSpiderRule()); 
+             before(grammarAccess.getZAPRule()); 
             pushFollow(FOLLOW_1);
-            ruleSpider();
+            ruleZAP();
 
             state._fsp--;
 
-             after(grammarAccess.getSpiderRule()); 
+             after(grammarAccess.getZAPRule()); 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -280,35 +280,35 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleSpider"
+    // $ANTLR end "entryRuleZAP"
 
 
-    // $ANTLR start "ruleSpider"
-    // InternalITL.g:112:1: ruleSpider : ( ( rule__Spider__Group__0 ) ) ;
-    public final void ruleSpider() throws RecognitionException {
+    // $ANTLR start "ruleZAP"
+    // InternalITL.g:112:1: ruleZAP : ( ( rule__ZAP__Group__0 ) ) ;
+    public final void ruleZAP() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:116:2: ( ( ( rule__Spider__Group__0 ) ) )
-            // InternalITL.g:117:2: ( ( rule__Spider__Group__0 ) )
+            // InternalITL.g:116:2: ( ( ( rule__ZAP__Group__0 ) ) )
+            // InternalITL.g:117:2: ( ( rule__ZAP__Group__0 ) )
             {
-            // InternalITL.g:117:2: ( ( rule__Spider__Group__0 ) )
-            // InternalITL.g:118:3: ( rule__Spider__Group__0 )
+            // InternalITL.g:117:2: ( ( rule__ZAP__Group__0 ) )
+            // InternalITL.g:118:3: ( rule__ZAP__Group__0 )
             {
-             before(grammarAccess.getSpiderAccess().getGroup()); 
-            // InternalITL.g:119:3: ( rule__Spider__Group__0 )
-            // InternalITL.g:119:4: rule__Spider__Group__0
+             before(grammarAccess.getZAPAccess().getGroup()); 
+            // InternalITL.g:119:3: ( rule__ZAP__Group__0 )
+            // InternalITL.g:119:4: rule__ZAP__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__0();
+            rule__ZAP__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpiderAccess().getGroup()); 
+             after(grammarAccess.getZAPAccess().getGroup()); 
 
             }
 
@@ -327,7 +327,7 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleSpider"
+    // $ANTLR end "ruleZAP"
 
 
     // $ANTLR start "entryRuleZAP_ADDRESS"
@@ -1024,13 +1024,13 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Testing_tool__Alternatives"
-    // InternalITL.g:352:1: rule__Testing_tool__Alternatives : ( ( ruleSpider ) | ( ruleW3af ) );
+    // InternalITL.g:352:1: rule__Testing_tool__Alternatives : ( ( ruleZAP ) | ( ruleW3af ) );
     public final void rule__Testing_tool__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:356:1: ( ( ruleSpider ) | ( ruleW3af ) )
+            // InternalITL.g:356:1: ( ( ruleZAP ) | ( ruleW3af ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1048,18 +1048,18 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalITL.g:357:2: ( ruleSpider )
+                    // InternalITL.g:357:2: ( ruleZAP )
                     {
-                    // InternalITL.g:357:2: ( ruleSpider )
-                    // InternalITL.g:358:3: ruleSpider
+                    // InternalITL.g:357:2: ( ruleZAP )
+                    // InternalITL.g:358:3: ruleZAP
                     {
-                     before(grammarAccess.getTesting_toolAccess().getSpiderParserRuleCall_0()); 
+                     before(grammarAccess.getTesting_toolAccess().getZAPParserRuleCall_0()); 
                     pushFollow(FOLLOW_2);
-                    ruleSpider();
+                    ruleZAP();
 
                     state._fsp--;
 
-                     after(grammarAccess.getTesting_toolAccess().getSpiderParserRuleCall_0()); 
+                     after(grammarAccess.getTesting_toolAccess().getZAPParserRuleCall_0()); 
 
                     }
 
@@ -1102,23 +1102,23 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Testing_tool__Alternatives"
 
 
-    // $ANTLR start "rule__Spider__Group__0"
-    // InternalITL.g:373:1: rule__Spider__Group__0 : rule__Spider__Group__0__Impl rule__Spider__Group__1 ;
-    public final void rule__Spider__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__0"
+    // InternalITL.g:373:1: rule__ZAP__Group__0 : rule__ZAP__Group__0__Impl rule__ZAP__Group__1 ;
+    public final void rule__ZAP__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:377:1: ( rule__Spider__Group__0__Impl rule__Spider__Group__1 )
-            // InternalITL.g:378:2: rule__Spider__Group__0__Impl rule__Spider__Group__1
+            // InternalITL.g:377:1: ( rule__ZAP__Group__0__Impl rule__ZAP__Group__1 )
+            // InternalITL.g:378:2: rule__ZAP__Group__0__Impl rule__ZAP__Group__1
             {
             pushFollow(FOLLOW_4);
-            rule__Spider__Group__0__Impl();
+            rule__ZAP__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__1();
+            rule__ZAP__Group__1();
 
             state._fsp--;
 
@@ -1137,25 +1137,25 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__0"
+    // $ANTLR end "rule__ZAP__Group__0"
 
 
-    // $ANTLR start "rule__Spider__Group__0__Impl"
-    // InternalITL.g:385:1: rule__Spider__Group__0__Impl : ( 'Spider' ) ;
-    public final void rule__Spider__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__0__Impl"
+    // InternalITL.g:385:1: rule__ZAP__Group__0__Impl : ( 'ZAP' ) ;
+    public final void rule__ZAP__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:389:1: ( ( 'Spider' ) )
-            // InternalITL.g:390:1: ( 'Spider' )
+            // InternalITL.g:389:1: ( ( 'ZAP' ) )
+            // InternalITL.g:390:1: ( 'ZAP' )
             {
-            // InternalITL.g:390:1: ( 'Spider' )
-            // InternalITL.g:391:2: 'Spider'
+            // InternalITL.g:390:1: ( 'ZAP' )
+            // InternalITL.g:391:2: 'ZAP'
             {
-             before(grammarAccess.getSpiderAccess().getSpiderKeyword_0()); 
+             before(grammarAccess.getZAPAccess().getZAPKeyword_0()); 
             match(input,11,FOLLOW_2); 
-             after(grammarAccess.getSpiderAccess().getSpiderKeyword_0()); 
+             after(grammarAccess.getZAPAccess().getZAPKeyword_0()); 
 
             }
 
@@ -1174,26 +1174,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__0__Impl"
+    // $ANTLR end "rule__ZAP__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__1"
-    // InternalITL.g:400:1: rule__Spider__Group__1 : rule__Spider__Group__1__Impl rule__Spider__Group__2 ;
-    public final void rule__Spider__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__1"
+    // InternalITL.g:400:1: rule__ZAP__Group__1 : rule__ZAP__Group__1__Impl rule__ZAP__Group__2 ;
+    public final void rule__ZAP__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:404:1: ( rule__Spider__Group__1__Impl rule__Spider__Group__2 )
-            // InternalITL.g:405:2: rule__Spider__Group__1__Impl rule__Spider__Group__2
+            // InternalITL.g:404:1: ( rule__ZAP__Group__1__Impl rule__ZAP__Group__2 )
+            // InternalITL.g:405:2: rule__ZAP__Group__1__Impl rule__ZAP__Group__2
             {
             pushFollow(FOLLOW_5);
-            rule__Spider__Group__1__Impl();
+            rule__ZAP__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__2();
+            rule__ZAP__Group__2();
 
             state._fsp--;
 
@@ -1212,35 +1212,35 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__1"
+    // $ANTLR end "rule__ZAP__Group__1"
 
 
-    // $ANTLR start "rule__Spider__Group__1__Impl"
-    // InternalITL.g:412:1: rule__Spider__Group__1__Impl : ( ( rule__Spider__NameAssignment_1 ) ) ;
-    public final void rule__Spider__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__1__Impl"
+    // InternalITL.g:412:1: rule__ZAP__Group__1__Impl : ( ( rule__ZAP__NameAssignment_1 ) ) ;
+    public final void rule__ZAP__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:416:1: ( ( ( rule__Spider__NameAssignment_1 ) ) )
-            // InternalITL.g:417:1: ( ( rule__Spider__NameAssignment_1 ) )
+            // InternalITL.g:416:1: ( ( ( rule__ZAP__NameAssignment_1 ) ) )
+            // InternalITL.g:417:1: ( ( rule__ZAP__NameAssignment_1 ) )
             {
-            // InternalITL.g:417:1: ( ( rule__Spider__NameAssignment_1 ) )
-            // InternalITL.g:418:2: ( rule__Spider__NameAssignment_1 )
+            // InternalITL.g:417:1: ( ( rule__ZAP__NameAssignment_1 ) )
+            // InternalITL.g:418:2: ( rule__ZAP__NameAssignment_1 )
             {
-             before(grammarAccess.getSpiderAccess().getNameAssignment_1()); 
-            // InternalITL.g:419:2: ( rule__Spider__NameAssignment_1 )
-            // InternalITL.g:419:3: rule__Spider__NameAssignment_1
+             before(grammarAccess.getZAPAccess().getNameAssignment_1()); 
+            // InternalITL.g:419:2: ( rule__ZAP__NameAssignment_1 )
+            // InternalITL.g:419:3: rule__ZAP__NameAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Spider__NameAssignment_1();
+            rule__ZAP__NameAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpiderAccess().getNameAssignment_1()); 
+             after(grammarAccess.getZAPAccess().getNameAssignment_1()); 
 
             }
 
@@ -1259,26 +1259,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__1__Impl"
+    // $ANTLR end "rule__ZAP__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__2"
-    // InternalITL.g:427:1: rule__Spider__Group__2 : rule__Spider__Group__2__Impl rule__Spider__Group__3 ;
-    public final void rule__Spider__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__2"
+    // InternalITL.g:427:1: rule__ZAP__Group__2 : rule__ZAP__Group__2__Impl rule__ZAP__Group__3 ;
+    public final void rule__ZAP__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:431:1: ( rule__Spider__Group__2__Impl rule__Spider__Group__3 )
-            // InternalITL.g:432:2: rule__Spider__Group__2__Impl rule__Spider__Group__3
+            // InternalITL.g:431:1: ( rule__ZAP__Group__2__Impl rule__ZAP__Group__3 )
+            // InternalITL.g:432:2: rule__ZAP__Group__2__Impl rule__ZAP__Group__3
             {
             pushFollow(FOLLOW_6);
-            rule__Spider__Group__2__Impl();
+            rule__ZAP__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__3();
+            rule__ZAP__Group__3();
 
             state._fsp--;
 
@@ -1297,12 +1297,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__2"
+    // $ANTLR end "rule__ZAP__Group__2"
 
 
-    // $ANTLR start "rule__Spider__Group__2__Impl"
-    // InternalITL.g:439:1: rule__Spider__Group__2__Impl : ( '{' ) ;
-    public final void rule__Spider__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__2__Impl"
+    // InternalITL.g:439:1: rule__ZAP__Group__2__Impl : ( '{' ) ;
+    public final void rule__ZAP__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1313,9 +1313,9 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:444:1: ( '{' )
             // InternalITL.g:445:2: '{'
             {
-             before(grammarAccess.getSpiderAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getZAPAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,12,FOLLOW_2); 
-             after(grammarAccess.getSpiderAccess().getLeftCurlyBracketKeyword_2()); 
+             after(grammarAccess.getZAPAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
 
@@ -1334,26 +1334,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__2__Impl"
+    // $ANTLR end "rule__ZAP__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__3"
-    // InternalITL.g:454:1: rule__Spider__Group__3 : rule__Spider__Group__3__Impl rule__Spider__Group__4 ;
-    public final void rule__Spider__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__3"
+    // InternalITL.g:454:1: rule__ZAP__Group__3 : rule__ZAP__Group__3__Impl rule__ZAP__Group__4 ;
+    public final void rule__ZAP__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:458:1: ( rule__Spider__Group__3__Impl rule__Spider__Group__4 )
-            // InternalITL.g:459:2: rule__Spider__Group__3__Impl rule__Spider__Group__4
+            // InternalITL.g:458:1: ( rule__ZAP__Group__3__Impl rule__ZAP__Group__4 )
+            // InternalITL.g:459:2: rule__ZAP__Group__3__Impl rule__ZAP__Group__4
             {
             pushFollow(FOLLOW_7);
-            rule__Spider__Group__3__Impl();
+            rule__ZAP__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__4();
+            rule__ZAP__Group__4();
 
             state._fsp--;
 
@@ -1372,35 +1372,35 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__3"
+    // $ANTLR end "rule__ZAP__Group__3"
 
 
-    // $ANTLR start "rule__Spider__Group__3__Impl"
-    // InternalITL.g:466:1: rule__Spider__Group__3__Impl : ( ( rule__Spider__Zap_targetAssignment_3 ) ) ;
-    public final void rule__Spider__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__3__Impl"
+    // InternalITL.g:466:1: rule__ZAP__Group__3__Impl : ( ( rule__ZAP__Zap_targetAssignment_3 ) ) ;
+    public final void rule__ZAP__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:470:1: ( ( ( rule__Spider__Zap_targetAssignment_3 ) ) )
-            // InternalITL.g:471:1: ( ( rule__Spider__Zap_targetAssignment_3 ) )
+            // InternalITL.g:470:1: ( ( ( rule__ZAP__Zap_targetAssignment_3 ) ) )
+            // InternalITL.g:471:1: ( ( rule__ZAP__Zap_targetAssignment_3 ) )
             {
-            // InternalITL.g:471:1: ( ( rule__Spider__Zap_targetAssignment_3 ) )
-            // InternalITL.g:472:2: ( rule__Spider__Zap_targetAssignment_3 )
+            // InternalITL.g:471:1: ( ( rule__ZAP__Zap_targetAssignment_3 ) )
+            // InternalITL.g:472:2: ( rule__ZAP__Zap_targetAssignment_3 )
             {
-             before(grammarAccess.getSpiderAccess().getZap_targetAssignment_3()); 
-            // InternalITL.g:473:2: ( rule__Spider__Zap_targetAssignment_3 )
-            // InternalITL.g:473:3: rule__Spider__Zap_targetAssignment_3
+             before(grammarAccess.getZAPAccess().getZap_targetAssignment_3()); 
+            // InternalITL.g:473:2: ( rule__ZAP__Zap_targetAssignment_3 )
+            // InternalITL.g:473:3: rule__ZAP__Zap_targetAssignment_3
             {
             pushFollow(FOLLOW_2);
-            rule__Spider__Zap_targetAssignment_3();
+            rule__ZAP__Zap_targetAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpiderAccess().getZap_targetAssignment_3()); 
+             after(grammarAccess.getZAPAccess().getZap_targetAssignment_3()); 
 
             }
 
@@ -1419,26 +1419,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__3__Impl"
+    // $ANTLR end "rule__ZAP__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__4"
-    // InternalITL.g:481:1: rule__Spider__Group__4 : rule__Spider__Group__4__Impl rule__Spider__Group__5 ;
-    public final void rule__Spider__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__4"
+    // InternalITL.g:481:1: rule__ZAP__Group__4 : rule__ZAP__Group__4__Impl rule__ZAP__Group__5 ;
+    public final void rule__ZAP__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:485:1: ( rule__Spider__Group__4__Impl rule__Spider__Group__5 )
-            // InternalITL.g:486:2: rule__Spider__Group__4__Impl rule__Spider__Group__5
+            // InternalITL.g:485:1: ( rule__ZAP__Group__4__Impl rule__ZAP__Group__5 )
+            // InternalITL.g:486:2: rule__ZAP__Group__4__Impl rule__ZAP__Group__5
             {
             pushFollow(FOLLOW_8);
-            rule__Spider__Group__4__Impl();
+            rule__ZAP__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__5();
+            rule__ZAP__Group__5();
 
             state._fsp--;
 
@@ -1457,12 +1457,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__4"
+    // $ANTLR end "rule__ZAP__Group__4"
 
 
-    // $ANTLR start "rule__Spider__Group__4__Impl"
-    // InternalITL.g:493:1: rule__Spider__Group__4__Impl : ( ';' ) ;
-    public final void rule__Spider__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__4__Impl"
+    // InternalITL.g:493:1: rule__ZAP__Group__4__Impl : ( ';' ) ;
+    public final void rule__ZAP__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1473,9 +1473,9 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:498:1: ( ';' )
             // InternalITL.g:499:2: ';'
             {
-             before(grammarAccess.getSpiderAccess().getSemicolonKeyword_4()); 
+             before(grammarAccess.getZAPAccess().getSemicolonKeyword_4()); 
             match(input,13,FOLLOW_2); 
-             after(grammarAccess.getSpiderAccess().getSemicolonKeyword_4()); 
+             after(grammarAccess.getZAPAccess().getSemicolonKeyword_4()); 
 
             }
 
@@ -1494,26 +1494,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__4__Impl"
+    // $ANTLR end "rule__ZAP__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__5"
-    // InternalITL.g:508:1: rule__Spider__Group__5 : rule__Spider__Group__5__Impl rule__Spider__Group__6 ;
-    public final void rule__Spider__Group__5() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__5"
+    // InternalITL.g:508:1: rule__ZAP__Group__5 : rule__ZAP__Group__5__Impl rule__ZAP__Group__6 ;
+    public final void rule__ZAP__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:512:1: ( rule__Spider__Group__5__Impl rule__Spider__Group__6 )
-            // InternalITL.g:513:2: rule__Spider__Group__5__Impl rule__Spider__Group__6
+            // InternalITL.g:512:1: ( rule__ZAP__Group__5__Impl rule__ZAP__Group__6 )
+            // InternalITL.g:513:2: rule__ZAP__Group__5__Impl rule__ZAP__Group__6
             {
             pushFollow(FOLLOW_7);
-            rule__Spider__Group__5__Impl();
+            rule__ZAP__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__6();
+            rule__ZAP__Group__6();
 
             state._fsp--;
 
@@ -1532,35 +1532,35 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__5"
+    // $ANTLR end "rule__ZAP__Group__5"
 
 
-    // $ANTLR start "rule__Spider__Group__5__Impl"
-    // InternalITL.g:520:1: rule__Spider__Group__5__Impl : ( ( rule__Spider__Zap_addressAssignment_5 ) ) ;
-    public final void rule__Spider__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__5__Impl"
+    // InternalITL.g:520:1: rule__ZAP__Group__5__Impl : ( ( rule__ZAP__Zap_addressAssignment_5 ) ) ;
+    public final void rule__ZAP__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:524:1: ( ( ( rule__Spider__Zap_addressAssignment_5 ) ) )
-            // InternalITL.g:525:1: ( ( rule__Spider__Zap_addressAssignment_5 ) )
+            // InternalITL.g:524:1: ( ( ( rule__ZAP__Zap_addressAssignment_5 ) ) )
+            // InternalITL.g:525:1: ( ( rule__ZAP__Zap_addressAssignment_5 ) )
             {
-            // InternalITL.g:525:1: ( ( rule__Spider__Zap_addressAssignment_5 ) )
-            // InternalITL.g:526:2: ( rule__Spider__Zap_addressAssignment_5 )
+            // InternalITL.g:525:1: ( ( rule__ZAP__Zap_addressAssignment_5 ) )
+            // InternalITL.g:526:2: ( rule__ZAP__Zap_addressAssignment_5 )
             {
-             before(grammarAccess.getSpiderAccess().getZap_addressAssignment_5()); 
-            // InternalITL.g:527:2: ( rule__Spider__Zap_addressAssignment_5 )
-            // InternalITL.g:527:3: rule__Spider__Zap_addressAssignment_5
+             before(grammarAccess.getZAPAccess().getZap_addressAssignment_5()); 
+            // InternalITL.g:527:2: ( rule__ZAP__Zap_addressAssignment_5 )
+            // InternalITL.g:527:3: rule__ZAP__Zap_addressAssignment_5
             {
             pushFollow(FOLLOW_2);
-            rule__Spider__Zap_addressAssignment_5();
+            rule__ZAP__Zap_addressAssignment_5();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpiderAccess().getZap_addressAssignment_5()); 
+             after(grammarAccess.getZAPAccess().getZap_addressAssignment_5()); 
 
             }
 
@@ -1579,26 +1579,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__5__Impl"
+    // $ANTLR end "rule__ZAP__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__6"
-    // InternalITL.g:535:1: rule__Spider__Group__6 : rule__Spider__Group__6__Impl rule__Spider__Group__7 ;
-    public final void rule__Spider__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__6"
+    // InternalITL.g:535:1: rule__ZAP__Group__6 : rule__ZAP__Group__6__Impl rule__ZAP__Group__7 ;
+    public final void rule__ZAP__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:539:1: ( rule__Spider__Group__6__Impl rule__Spider__Group__7 )
-            // InternalITL.g:540:2: rule__Spider__Group__6__Impl rule__Spider__Group__7
+            // InternalITL.g:539:1: ( rule__ZAP__Group__6__Impl rule__ZAP__Group__7 )
+            // InternalITL.g:540:2: rule__ZAP__Group__6__Impl rule__ZAP__Group__7
             {
             pushFollow(FOLLOW_9);
-            rule__Spider__Group__6__Impl();
+            rule__ZAP__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__7();
+            rule__ZAP__Group__7();
 
             state._fsp--;
 
@@ -1617,12 +1617,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__6"
+    // $ANTLR end "rule__ZAP__Group__6"
 
 
-    // $ANTLR start "rule__Spider__Group__6__Impl"
-    // InternalITL.g:547:1: rule__Spider__Group__6__Impl : ( ';' ) ;
-    public final void rule__Spider__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__6__Impl"
+    // InternalITL.g:547:1: rule__ZAP__Group__6__Impl : ( ';' ) ;
+    public final void rule__ZAP__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1633,9 +1633,9 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:552:1: ( ';' )
             // InternalITL.g:553:2: ';'
             {
-             before(grammarAccess.getSpiderAccess().getSemicolonKeyword_6()); 
+             before(grammarAccess.getZAPAccess().getSemicolonKeyword_6()); 
             match(input,13,FOLLOW_2); 
-             after(grammarAccess.getSpiderAccess().getSemicolonKeyword_6()); 
+             after(grammarAccess.getZAPAccess().getSemicolonKeyword_6()); 
 
             }
 
@@ -1654,26 +1654,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__6__Impl"
+    // $ANTLR end "rule__ZAP__Group__6__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__7"
-    // InternalITL.g:562:1: rule__Spider__Group__7 : rule__Spider__Group__7__Impl rule__Spider__Group__8 ;
-    public final void rule__Spider__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__7"
+    // InternalITL.g:562:1: rule__ZAP__Group__7 : rule__ZAP__Group__7__Impl rule__ZAP__Group__8 ;
+    public final void rule__ZAP__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:566:1: ( rule__Spider__Group__7__Impl rule__Spider__Group__8 )
-            // InternalITL.g:567:2: rule__Spider__Group__7__Impl rule__Spider__Group__8
+            // InternalITL.g:566:1: ( rule__ZAP__Group__7__Impl rule__ZAP__Group__8 )
+            // InternalITL.g:567:2: rule__ZAP__Group__7__Impl rule__ZAP__Group__8
             {
             pushFollow(FOLLOW_7);
-            rule__Spider__Group__7__Impl();
+            rule__ZAP__Group__7__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__8();
+            rule__ZAP__Group__8();
 
             state._fsp--;
 
@@ -1692,35 +1692,35 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__7"
+    // $ANTLR end "rule__ZAP__Group__7"
 
 
-    // $ANTLR start "rule__Spider__Group__7__Impl"
-    // InternalITL.g:574:1: rule__Spider__Group__7__Impl : ( ( rule__Spider__Zap_max_depthAssignment_7 ) ) ;
-    public final void rule__Spider__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__7__Impl"
+    // InternalITL.g:574:1: rule__ZAP__Group__7__Impl : ( ( rule__ZAP__Zap_max_depthAssignment_7 ) ) ;
+    public final void rule__ZAP__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:578:1: ( ( ( rule__Spider__Zap_max_depthAssignment_7 ) ) )
-            // InternalITL.g:579:1: ( ( rule__Spider__Zap_max_depthAssignment_7 ) )
+            // InternalITL.g:578:1: ( ( ( rule__ZAP__Zap_max_depthAssignment_7 ) ) )
+            // InternalITL.g:579:1: ( ( rule__ZAP__Zap_max_depthAssignment_7 ) )
             {
-            // InternalITL.g:579:1: ( ( rule__Spider__Zap_max_depthAssignment_7 ) )
-            // InternalITL.g:580:2: ( rule__Spider__Zap_max_depthAssignment_7 )
+            // InternalITL.g:579:1: ( ( rule__ZAP__Zap_max_depthAssignment_7 ) )
+            // InternalITL.g:580:2: ( rule__ZAP__Zap_max_depthAssignment_7 )
             {
-             before(grammarAccess.getSpiderAccess().getZap_max_depthAssignment_7()); 
-            // InternalITL.g:581:2: ( rule__Spider__Zap_max_depthAssignment_7 )
-            // InternalITL.g:581:3: rule__Spider__Zap_max_depthAssignment_7
+             before(grammarAccess.getZAPAccess().getZap_max_depthAssignment_7()); 
+            // InternalITL.g:581:2: ( rule__ZAP__Zap_max_depthAssignment_7 )
+            // InternalITL.g:581:3: rule__ZAP__Zap_max_depthAssignment_7
             {
             pushFollow(FOLLOW_2);
-            rule__Spider__Zap_max_depthAssignment_7();
+            rule__ZAP__Zap_max_depthAssignment_7();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpiderAccess().getZap_max_depthAssignment_7()); 
+             after(grammarAccess.getZAPAccess().getZap_max_depthAssignment_7()); 
 
             }
 
@@ -1739,26 +1739,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__7__Impl"
+    // $ANTLR end "rule__ZAP__Group__7__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__8"
-    // InternalITL.g:589:1: rule__Spider__Group__8 : rule__Spider__Group__8__Impl rule__Spider__Group__9 ;
-    public final void rule__Spider__Group__8() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__8"
+    // InternalITL.g:589:1: rule__ZAP__Group__8 : rule__ZAP__Group__8__Impl rule__ZAP__Group__9 ;
+    public final void rule__ZAP__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:593:1: ( rule__Spider__Group__8__Impl rule__Spider__Group__9 )
-            // InternalITL.g:594:2: rule__Spider__Group__8__Impl rule__Spider__Group__9
+            // InternalITL.g:593:1: ( rule__ZAP__Group__8__Impl rule__ZAP__Group__9 )
+            // InternalITL.g:594:2: rule__ZAP__Group__8__Impl rule__ZAP__Group__9
             {
             pushFollow(FOLLOW_10);
-            rule__Spider__Group__8__Impl();
+            rule__ZAP__Group__8__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__9();
+            rule__ZAP__Group__9();
 
             state._fsp--;
 
@@ -1777,12 +1777,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__8"
+    // $ANTLR end "rule__ZAP__Group__8"
 
 
-    // $ANTLR start "rule__Spider__Group__8__Impl"
-    // InternalITL.g:601:1: rule__Spider__Group__8__Impl : ( ';' ) ;
-    public final void rule__Spider__Group__8__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__8__Impl"
+    // InternalITL.g:601:1: rule__ZAP__Group__8__Impl : ( ';' ) ;
+    public final void rule__ZAP__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1793,9 +1793,9 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:606:1: ( ';' )
             // InternalITL.g:607:2: ';'
             {
-             before(grammarAccess.getSpiderAccess().getSemicolonKeyword_8()); 
+             before(grammarAccess.getZAPAccess().getSemicolonKeyword_8()); 
             match(input,13,FOLLOW_2); 
-             after(grammarAccess.getSpiderAccess().getSemicolonKeyword_8()); 
+             after(grammarAccess.getZAPAccess().getSemicolonKeyword_8()); 
 
             }
 
@@ -1814,26 +1814,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__8__Impl"
+    // $ANTLR end "rule__ZAP__Group__8__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__9"
-    // InternalITL.g:616:1: rule__Spider__Group__9 : rule__Spider__Group__9__Impl rule__Spider__Group__10 ;
-    public final void rule__Spider__Group__9() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__9"
+    // InternalITL.g:616:1: rule__ZAP__Group__9 : rule__ZAP__Group__9__Impl rule__ZAP__Group__10 ;
+    public final void rule__ZAP__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:620:1: ( rule__Spider__Group__9__Impl rule__Spider__Group__10 )
-            // InternalITL.g:621:2: rule__Spider__Group__9__Impl rule__Spider__Group__10
+            // InternalITL.g:620:1: ( rule__ZAP__Group__9__Impl rule__ZAP__Group__10 )
+            // InternalITL.g:621:2: rule__ZAP__Group__9__Impl rule__ZAP__Group__10
             {
             pushFollow(FOLLOW_11);
-            rule__Spider__Group__9__Impl();
+            rule__ZAP__Group__9__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__10();
+            rule__ZAP__Group__10();
 
             state._fsp--;
 
@@ -1852,35 +1852,35 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__9"
+    // $ANTLR end "rule__ZAP__Group__9"
 
 
-    // $ANTLR start "rule__Spider__Group__9__Impl"
-    // InternalITL.g:628:1: rule__Spider__Group__9__Impl : ( ( rule__Spider__Zap_api_keyAssignment_9 ) ) ;
-    public final void rule__Spider__Group__9__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__9__Impl"
+    // InternalITL.g:628:1: rule__ZAP__Group__9__Impl : ( ( rule__ZAP__Zap_api_keyAssignment_9 ) ) ;
+    public final void rule__ZAP__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:632:1: ( ( ( rule__Spider__Zap_api_keyAssignment_9 ) ) )
-            // InternalITL.g:633:1: ( ( rule__Spider__Zap_api_keyAssignment_9 ) )
+            // InternalITL.g:632:1: ( ( ( rule__ZAP__Zap_api_keyAssignment_9 ) ) )
+            // InternalITL.g:633:1: ( ( rule__ZAP__Zap_api_keyAssignment_9 ) )
             {
-            // InternalITL.g:633:1: ( ( rule__Spider__Zap_api_keyAssignment_9 ) )
-            // InternalITL.g:634:2: ( rule__Spider__Zap_api_keyAssignment_9 )
+            // InternalITL.g:633:1: ( ( rule__ZAP__Zap_api_keyAssignment_9 ) )
+            // InternalITL.g:634:2: ( rule__ZAP__Zap_api_keyAssignment_9 )
             {
-             before(grammarAccess.getSpiderAccess().getZap_api_keyAssignment_9()); 
-            // InternalITL.g:635:2: ( rule__Spider__Zap_api_keyAssignment_9 )
-            // InternalITL.g:635:3: rule__Spider__Zap_api_keyAssignment_9
+             before(grammarAccess.getZAPAccess().getZap_api_keyAssignment_9()); 
+            // InternalITL.g:635:2: ( rule__ZAP__Zap_api_keyAssignment_9 )
+            // InternalITL.g:635:3: rule__ZAP__Zap_api_keyAssignment_9
             {
             pushFollow(FOLLOW_2);
-            rule__Spider__Zap_api_keyAssignment_9();
+            rule__ZAP__Zap_api_keyAssignment_9();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getSpiderAccess().getZap_api_keyAssignment_9()); 
+             after(grammarAccess.getZAPAccess().getZap_api_keyAssignment_9()); 
 
             }
 
@@ -1899,26 +1899,26 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__9__Impl"
+    // $ANTLR end "rule__ZAP__Group__9__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__10"
-    // InternalITL.g:643:1: rule__Spider__Group__10 : rule__Spider__Group__10__Impl rule__Spider__Group__11 ;
-    public final void rule__Spider__Group__10() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__10"
+    // InternalITL.g:643:1: rule__ZAP__Group__10 : rule__ZAP__Group__10__Impl rule__ZAP__Group__11 ;
+    public final void rule__ZAP__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:647:1: ( rule__Spider__Group__10__Impl rule__Spider__Group__11 )
-            // InternalITL.g:648:2: rule__Spider__Group__10__Impl rule__Spider__Group__11
+            // InternalITL.g:647:1: ( rule__ZAP__Group__10__Impl rule__ZAP__Group__11 )
+            // InternalITL.g:648:2: rule__ZAP__Group__10__Impl rule__ZAP__Group__11
             {
             pushFollow(FOLLOW_11);
-            rule__Spider__Group__10__Impl();
+            rule__ZAP__Group__10__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__11();
+            rule__ZAP__Group__11();
 
             state._fsp--;
 
@@ -1937,12 +1937,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__10"
+    // $ANTLR end "rule__ZAP__Group__10"
 
 
-    // $ANTLR start "rule__Spider__Group__10__Impl"
-    // InternalITL.g:655:1: rule__Spider__Group__10__Impl : ( ( ';' )? ) ;
-    public final void rule__Spider__Group__10__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__10__Impl"
+    // InternalITL.g:655:1: rule__ZAP__Group__10__Impl : ( ( ';' )? ) ;
+    public final void rule__ZAP__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -1953,7 +1953,7 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:660:1: ( ( ';' )? )
             // InternalITL.g:661:2: ( ';' )?
             {
-             before(grammarAccess.getSpiderAccess().getSemicolonKeyword_10()); 
+             before(grammarAccess.getZAPAccess().getSemicolonKeyword_10()); 
             // InternalITL.g:662:2: ( ';' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
@@ -1972,7 +1972,7 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getSpiderAccess().getSemicolonKeyword_10()); 
+             after(grammarAccess.getZAPAccess().getSemicolonKeyword_10()); 
 
             }
 
@@ -1991,21 +1991,21 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__10__Impl"
+    // $ANTLR end "rule__ZAP__Group__10__Impl"
 
 
-    // $ANTLR start "rule__Spider__Group__11"
-    // InternalITL.g:670:1: rule__Spider__Group__11 : rule__Spider__Group__11__Impl ;
-    public final void rule__Spider__Group__11() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__11"
+    // InternalITL.g:670:1: rule__ZAP__Group__11 : rule__ZAP__Group__11__Impl ;
+    public final void rule__ZAP__Group__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalITL.g:674:1: ( rule__Spider__Group__11__Impl )
-            // InternalITL.g:675:2: rule__Spider__Group__11__Impl
+            // InternalITL.g:674:1: ( rule__ZAP__Group__11__Impl )
+            // InternalITL.g:675:2: rule__ZAP__Group__11__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Spider__Group__11__Impl();
+            rule__ZAP__Group__11__Impl();
 
             state._fsp--;
 
@@ -2024,12 +2024,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__11"
+    // $ANTLR end "rule__ZAP__Group__11"
 
 
-    // $ANTLR start "rule__Spider__Group__11__Impl"
-    // InternalITL.g:681:1: rule__Spider__Group__11__Impl : ( '}' ) ;
-    public final void rule__Spider__Group__11__Impl() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Group__11__Impl"
+    // InternalITL.g:681:1: rule__ZAP__Group__11__Impl : ( '}' ) ;
+    public final void rule__ZAP__Group__11__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -2040,9 +2040,9 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:686:1: ( '}' )
             // InternalITL.g:687:2: '}'
             {
-             before(grammarAccess.getSpiderAccess().getRightCurlyBracketKeyword_11()); 
+             before(grammarAccess.getZAPAccess().getRightCurlyBracketKeyword_11()); 
             match(input,14,FOLLOW_2); 
-             after(grammarAccess.getSpiderAccess().getRightCurlyBracketKeyword_11()); 
+             after(grammarAccess.getZAPAccess().getRightCurlyBracketKeyword_11()); 
 
             }
 
@@ -2061,7 +2061,7 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Group__11__Impl"
+    // $ANTLR end "rule__ZAP__Group__11__Impl"
 
 
     // $ANTLR start "rule__ZAP_ADDRESS__Group__0"
@@ -4307,9 +4307,9 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Model__Testing_toolsAssignment"
 
 
-    // $ANTLR start "rule__Spider__NameAssignment_1"
-    // InternalITL.g:1468:1: rule__Spider__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Spider__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__NameAssignment_1"
+    // InternalITL.g:1468:1: rule__ZAP__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__ZAP__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4320,9 +4320,9 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:1473:2: ( RULE_ID )
             // InternalITL.g:1474:3: RULE_ID
             {
-             before(grammarAccess.getSpiderAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getZAPAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getSpiderAccess().getNameIDTerminalRuleCall_1_0()); 
+             after(grammarAccess.getZAPAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -4341,12 +4341,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__NameAssignment_1"
+    // $ANTLR end "rule__ZAP__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Spider__Zap_targetAssignment_3"
-    // InternalITL.g:1483:1: rule__Spider__Zap_targetAssignment_3 : ( ruleZAP_TARGET ) ;
-    public final void rule__Spider__Zap_targetAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Zap_targetAssignment_3"
+    // InternalITL.g:1483:1: rule__ZAP__Zap_targetAssignment_3 : ( ruleZAP_TARGET ) ;
+    public final void rule__ZAP__Zap_targetAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4357,13 +4357,13 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:1488:2: ( ruleZAP_TARGET )
             // InternalITL.g:1489:3: ruleZAP_TARGET
             {
-             before(grammarAccess.getSpiderAccess().getZap_targetZAP_TARGETParserRuleCall_3_0()); 
+             before(grammarAccess.getZAPAccess().getZap_targetZAP_TARGETParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
             ruleZAP_TARGET();
 
             state._fsp--;
 
-             after(grammarAccess.getSpiderAccess().getZap_targetZAP_TARGETParserRuleCall_3_0()); 
+             after(grammarAccess.getZAPAccess().getZap_targetZAP_TARGETParserRuleCall_3_0()); 
 
             }
 
@@ -4382,12 +4382,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Zap_targetAssignment_3"
+    // $ANTLR end "rule__ZAP__Zap_targetAssignment_3"
 
 
-    // $ANTLR start "rule__Spider__Zap_addressAssignment_5"
-    // InternalITL.g:1498:1: rule__Spider__Zap_addressAssignment_5 : ( ruleZAP_ADDRESS ) ;
-    public final void rule__Spider__Zap_addressAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Zap_addressAssignment_5"
+    // InternalITL.g:1498:1: rule__ZAP__Zap_addressAssignment_5 : ( ruleZAP_ADDRESS ) ;
+    public final void rule__ZAP__Zap_addressAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4398,13 +4398,13 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:1503:2: ( ruleZAP_ADDRESS )
             // InternalITL.g:1504:3: ruleZAP_ADDRESS
             {
-             before(grammarAccess.getSpiderAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0()); 
+             before(grammarAccess.getZAPAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
             ruleZAP_ADDRESS();
 
             state._fsp--;
 
-             after(grammarAccess.getSpiderAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0()); 
+             after(grammarAccess.getZAPAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0()); 
 
             }
 
@@ -4423,12 +4423,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Zap_addressAssignment_5"
+    // $ANTLR end "rule__ZAP__Zap_addressAssignment_5"
 
 
-    // $ANTLR start "rule__Spider__Zap_max_depthAssignment_7"
-    // InternalITL.g:1513:1: rule__Spider__Zap_max_depthAssignment_7 : ( ruleZAP_MAX_DEPTH ) ;
-    public final void rule__Spider__Zap_max_depthAssignment_7() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Zap_max_depthAssignment_7"
+    // InternalITL.g:1513:1: rule__ZAP__Zap_max_depthAssignment_7 : ( ruleZAP_MAX_DEPTH ) ;
+    public final void rule__ZAP__Zap_max_depthAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4439,13 +4439,13 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:1518:2: ( ruleZAP_MAX_DEPTH )
             // InternalITL.g:1519:3: ruleZAP_MAX_DEPTH
             {
-             before(grammarAccess.getSpiderAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0()); 
+             before(grammarAccess.getZAPAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0()); 
             pushFollow(FOLLOW_2);
             ruleZAP_MAX_DEPTH();
 
             state._fsp--;
 
-             after(grammarAccess.getSpiderAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0()); 
+             after(grammarAccess.getZAPAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0()); 
 
             }
 
@@ -4464,12 +4464,12 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Zap_max_depthAssignment_7"
+    // $ANTLR end "rule__ZAP__Zap_max_depthAssignment_7"
 
 
-    // $ANTLR start "rule__Spider__Zap_api_keyAssignment_9"
-    // InternalITL.g:1528:1: rule__Spider__Zap_api_keyAssignment_9 : ( ruleZAP_API_KEY ) ;
-    public final void rule__Spider__Zap_api_keyAssignment_9() throws RecognitionException {
+    // $ANTLR start "rule__ZAP__Zap_api_keyAssignment_9"
+    // InternalITL.g:1528:1: rule__ZAP__Zap_api_keyAssignment_9 : ( ruleZAP_API_KEY ) ;
+    public final void rule__ZAP__Zap_api_keyAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -4480,13 +4480,13 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
             // InternalITL.g:1533:2: ( ruleZAP_API_KEY )
             // InternalITL.g:1534:3: ruleZAP_API_KEY
             {
-             before(grammarAccess.getSpiderAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0()); 
+             before(grammarAccess.getZAPAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0()); 
             pushFollow(FOLLOW_2);
             ruleZAP_API_KEY();
 
             state._fsp--;
 
-             after(grammarAccess.getSpiderAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0()); 
+             after(grammarAccess.getZAPAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0()); 
 
             }
 
@@ -4505,7 +4505,7 @@ public class InternalITLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Spider__Zap_api_keyAssignment_9"
+    // $ANTLR end "rule__ZAP__Zap_api_keyAssignment_9"
 
 
     // $ANTLR start "rule__ZAP_ADDRESS__NameAssignment_1"

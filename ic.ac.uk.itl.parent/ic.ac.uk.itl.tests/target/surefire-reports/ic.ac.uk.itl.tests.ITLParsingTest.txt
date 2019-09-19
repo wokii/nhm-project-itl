@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: ic.ac.uk.itl.tests.ITLParsingTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.457 s - in ic.ac.uk.itl.tests.ITLParsingTest
+testGenerator2  Time elapsed: 2.4 s
+loadModel1  Time elapsed: 0.017 s
+loadModel2  Time elapsed: 0.007 s
+both  Time elapsed: 0.009 s
+testGenerator  Time elapsed: 0.011 s

@@ -5,10 +5,23 @@ package ic.ac.uk.itl.tests;
 
 import com.google.inject.Inject;
 import ic.ac.uk.itl.iTL.Model;
+import ic.ac.uk.itl.iTL.W3af;
+import ic.ac.uk.itl.iTL.ZAP;
+import ic.ac.uk.itl.iTL.testing_tool;
 import ic.ac.uk.itl.tests.ITLInjectorProvider;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.testing.InjectWith;
 import org.eclipse.xtext.testing.extensions.InjectionExtension;
 import org.eclipse.xtext.testing.util.ParseHelper;
+import org.eclipse.xtext.xbase.lib.Exceptions;
+import org.eclipse.xtext.xbase.lib.Extension;
+import org.eclipse.xtext.xbase.lib.InputOutput;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
+import org.eclipse.xtext.xbase.testing.CompilationTestHelper;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(InjectionExtension.class)
@@ -17,4 +30,365 @@ import org.junit.jupiter.api.extension.ExtendWith;
 public class ITLParsingTest {
   @Inject
   private ParseHelper<Model> parseHelper;
+  
+  @Inject
+  @Extension
+  private CompilationTestHelper _compilationTestHelper;
+  
+  @Test
+  public void loadModel1() {
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("ZAP spider234ee1 {");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_TARGET: \"http://wokii.github.io\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_ADDRESS: \"\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_MAX_DEPTH: 1; ");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_API_KEY: \"ne61duaiac6dmbuqldosn35ocl\"");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      final Model result = this.parseHelper.parse(_builder);
+      testing_tool _get = result.getTesting_tools().get(0);
+      final ZAP zap = ((ZAP) _get);
+      InputOutput.<String>println(((ZAP) zap).getName());
+      Assertions.assertNotNull(result);
+      final String zap_target = zap.getZap_target().getName();
+      final String zap_address = zap.getZap_address().getName();
+      final int zap_max_depth = zap.getZap_max_depth().getName();
+      final String zap_api_key = zap.getZap_api_key().getName();
+      Assertions.assertEquals("spider234ee1", zap.getName());
+      Assertions.assertEquals("http://wokii.github.io", zap_target);
+      Assertions.assertEquals("", zap_address);
+      Assertions.assertEquals(1, zap_max_depth);
+      Assertions.assertEquals("ne61duaiac6dmbuqldosn35ocl", zap_api_key);
+      final EList<Resource.Diagnostic> errors = result.eResource().getErrors();
+      boolean _isEmpty = errors.isEmpty();
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("Unexpected errors: ");
+      String _join = IterableExtensions.join(errors, ", ");
+      _builder_1.append(_join);
+      Assertions.assertTrue(_isEmpty, _builder_1.toString());
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  @Test
+  public void loadModel2() {
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("W3af w3af1 {");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_TEST_TYPE: \"audit,auth\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_ADDRESS: \"/Users/gonewiththewind/nhm_generateded/\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_REPORT_ADDRESS: \"/Users/gonewiththewind/nhm_generated/\";");
+      _builder.newLine();
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_TARGET: \"http://wokii.github.io\"");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      final Model result = this.parseHelper.parse(_builder);
+      testing_tool _get = result.getTesting_tools().get(0);
+      final W3af w3af = ((W3af) _get);
+      InputOutput.<String>println(w3af.getName());
+      Assertions.assertNotNull(result);
+      final String w3af_test_type = w3af.getW3af_test_type().getName();
+      final String w3af_address = w3af.getW3af_address().getName();
+      final String w3af_report_address = w3af.getW3af_report_path().getName();
+      final String w3af_target = w3af.getW3af_target().getName();
+      Assertions.assertNotNull(result);
+      Assertions.assertEquals("/Users/gonewiththewind/nhm_generateded/", w3af_address);
+      Assertions.assertEquals("/Users/gonewiththewind/nhm_generated/", w3af_report_address);
+      Assertions.assertEquals("audit,auth", w3af_test_type);
+      Assertions.assertEquals("w3af1", w3af.getName());
+      Assertions.assertEquals("http://wokii.github.io", w3af_target);
+      final EList<Resource.Diagnostic> errors = result.eResource().getErrors();
+      boolean _isEmpty = errors.isEmpty();
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("Unexpected errors: ");
+      String _join = IterableExtensions.join(errors, ", ");
+      _builder_1.append(_join);
+      Assertions.assertTrue(_isEmpty, _builder_1.toString());
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  @Test
+  public void testGenerator() {
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("ZAP spider234ee1 {");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_TARGET: \"http://wokii.github.io\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_ADDRESS: \"/Users/gonewiththewind/nhm_generated/\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_MAX_DEPTH: 1; ");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_API_KEY: \"ne61duaiac6dmbuqldosn35ocl\"");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("#!/usr/bin/env python");
+      _builder_1.newLine();
+      _builder_1.append("# A basic ZAP Python API example which spiders and scans a target URL");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("import time");
+      _builder_1.newLine();
+      _builder_1.append("from pprint import pprint");
+      _builder_1.newLine();
+      _builder_1.append("from zapv2 import ZAPv2");
+      _builder_1.newLine();
+      _builder_1.append("# use pip install python-owasp-zap-v2.4 to install python api client in order to run this script");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("target = \"http://wokii.github.io\"");
+      _builder_1.newLine();
+      _builder_1.append("apikey = \"ne61duaiac6dmbuqldosn35ocl\" # Change to match the API key set in ZAP, or use None if the API key is disabled");
+      _builder_1.newLine();
+      _builder_1.append("#");
+      _builder_1.newLine();
+      _builder_1.append("# By default ZAP API client will connect to port 8080");
+      _builder_1.newLine();
+      _builder_1.append("zap = ZAPv2(apikey=apikey)");
+      _builder_1.newLine();
+      _builder_1.append("# Use the line below if ZAP is not listening on port 8080, for example, if listening on port 8090");
+      _builder_1.newLine();
+      _builder_1.append("#zap = ZAPv2(apikey=apikey, proxies={\'http\': target+\':\'+str(8080), \'https\': target+\':\'+str(8080)})");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("# Proxy a request to the target so that ZAP has something to deal with");
+      _builder_1.newLine();
+      _builder_1.append("print(\'Accessing target {}\'.format(target))");
+      _builder_1.newLine();
+      _builder_1.append("zap.urlopen(target)");
+      _builder_1.newLine();
+      _builder_1.append("# Give the sites tree a chance to get updated");
+      _builder_1.newLine();
+      _builder_1.append("time.sleep(2)");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("print(\'Spidering target {}\'.format(target))");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("scanid = zap.spider.scan(target)");
+      _builder_1.newLine();
+      _builder_1.append("zap.spider.set_option_max_depth(1)");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("# Give the Spider a chance to start");
+      _builder_1.newLine();
+      _builder_1.append("time.sleep(2)");
+      _builder_1.newLine();
+      _builder_1.append("while (int(zap.spider.status(scanid)) < 100):");
+      _builder_1.newLine();
+      _builder_1.append("    ");
+      _builder_1.append("# Loop until the spider has finished");
+      _builder_1.newLine();
+      _builder_1.append("    ");
+      _builder_1.append("print(\'Spider progress %: {}\'.format(zap.spider.status(scanid)))");
+      _builder_1.newLine();
+      _builder_1.append("    ");
+      _builder_1.append("time.sleep(2)");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("print (\'Spider completed\')");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("while (int(zap.pscan.records_to_scan) > 0):");
+      _builder_1.newLine();
+      _builder_1.append("      ");
+      _builder_1.append("print (\'Records to passive scan : {}\'.format(zap.pscan.records_to_scan))");
+      _builder_1.newLine();
+      _builder_1.append("      ");
+      _builder_1.append("time.sleep(2)");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("print (\'Passive Scan completed\')");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("print (\'Active Scanning target {}\'.format(target))");
+      _builder_1.newLine();
+      _builder_1.append("scanid = zap.ascan.scan(target)");
+      _builder_1.newLine();
+      _builder_1.append("while (int(zap.ascan.status(scanid)) < 100):");
+      _builder_1.newLine();
+      _builder_1.append("    ");
+      _builder_1.append("# Loop until the scanner has finished");
+      _builder_1.newLine();
+      _builder_1.append("    ");
+      _builder_1.append("print (\'Scan progress %: {}\'.format(zap.ascan.status(scanid)))");
+      _builder_1.newLine();
+      _builder_1.append("    ");
+      _builder_1.append("time.sleep(5)");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("print (\'Active Scan completed\')");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("# Report the results");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("print (\'Hosts: {}\'.format(\', \'.join(zap.core.hosts)))");
+      _builder_1.newLine();
+      _builder_1.append("print (\'Alerts: \')");
+      _builder_1.newLine();
+      _builder_1.append("pprint (zap.core.alerts())");
+      _builder_1.newLine();
+      this._compilationTestHelper.assertCompilesTo(_builder, _builder_1);
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  @Test
+  public void testGenerator2() {
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("W3af w3af1 {");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_TEST_TYPE: \"audit,auth\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_ADDRESS: \"/Users/gonewiththewind/nhm_generateded/\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_REPORT_ADDRESS: \"/Users/gonewiththewind/nhm_generated/\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_TARGET: \"http://wokii.github.io\"");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("plugins");
+      _builder_1.newLine();
+      _builder_1.append("output console, html_file");
+      _builder_1.newLine();
+      _builder_1.append("output");
+      _builder_1.newLine();
+      _builder_1.append("output config html_file");
+      _builder_1.newLine();
+      _builder_1.append("set verbose true");
+      _builder_1.newLine();
+      _builder_1.append("back");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("output config console");
+      _builder_1.newLine();
+      _builder_1.append("set verbose true");
+      _builder_1.newLine();
+      _builder_1.append("back");
+      _builder_1.newLine();
+      _builder_1.append("audit all");
+      _builder_1.newLine();
+      _builder_1.append("audit");
+      _builder_1.newLine();
+      _builder_1.append("auth all");
+      _builder_1.newLine();
+      _builder_1.append("auth");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("\t\t");
+      _builder_1.newLine();
+      _builder_1.append("back");
+      _builder_1.newLine();
+      _builder_1.append("target");
+      _builder_1.newLine();
+      _builder_1.append("set target http://wokii.github.io");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("back");
+      _builder_1.newLine();
+      _builder_1.append("start");
+      _builder_1.newLine();
+      _builder_1.newLine();
+      _builder_1.append("exit");
+      _builder_1.newLine();
+      this._compilationTestHelper.assertCompilesTo(_builder, _builder_1);
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  @Test
+  public void both() {
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("ZAP spider234ee1 {");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_TARGET: \"http://wokii.github.io\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_ADDRESS: \"/Users/gonewiththewind/nhm_generateded/\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_MAX_DEPTH: 1; ");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("ZAP_API_KEY: \"ne61duaiac6dmbuqldosn35ocl\"");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      _builder.append("W3af w3af1 {");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_TEST_TYPE: \"audit,auth\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_ADDRESS: \"/Users/gonewiththewind/nhm_generateded/\";");
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_REPORT_ADDRESS: \"/Users/gonewiththewind/nhm_generated/\";");
+      _builder.newLine();
+      _builder.newLine();
+      _builder.append("\t");
+      _builder.append("W3AF_TARGET: \"http://wokii.github.io\"");
+      _builder.newLine();
+      _builder.append("}");
+      _builder.newLine();
+      final Model result = this.parseHelper.parse(_builder);
+      Assertions.assertNotNull(result);
+      final EList<Resource.Diagnostic> errors = result.eResource().getErrors();
+      InputOutput.<EList<Resource.Diagnostic>>println(errors);
+      boolean _isEmpty = errors.isEmpty();
+      StringConcatenation _builder_1 = new StringConcatenation();
+      _builder_1.append("Unexpected errors: ");
+      String _join = IterableExtensions.join(errors, ", ");
+      _builder_1.append(_join);
+      Assertions.assertTrue(_isEmpty, _builder_1.toString());
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
 }

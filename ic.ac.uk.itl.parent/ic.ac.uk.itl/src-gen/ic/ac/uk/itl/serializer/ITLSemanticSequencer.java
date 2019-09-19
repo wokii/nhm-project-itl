@@ -6,12 +6,12 @@ package ic.ac.uk.itl.serializer;
 import com.google.inject.Inject;
 import ic.ac.uk.itl.iTL.ITLPackage;
 import ic.ac.uk.itl.iTL.Model;
-import ic.ac.uk.itl.iTL.Spider;
 import ic.ac.uk.itl.iTL.W3AF_ADDRESS;
 import ic.ac.uk.itl.iTL.W3AF_REPORT_ADDRESS;
 import ic.ac.uk.itl.iTL.W3AF_TARGET;
 import ic.ac.uk.itl.iTL.W3AF_TEST_TYPE;
 import ic.ac.uk.itl.iTL.W3af;
+import ic.ac.uk.itl.iTL.ZAP;
 import ic.ac.uk.itl.iTL.ZAP_ADDRESS;
 import ic.ac.uk.itl.iTL.ZAP_API_KEY;
 import ic.ac.uk.itl.iTL.ZAP_MAX_DEPTH;
@@ -45,9 +45,6 @@ public class ITLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case ITLPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
 				return; 
-			case ITLPackage.SPIDER:
-				sequence_Spider(context, (Spider) semanticObject); 
-				return; 
 			case ITLPackage.W3AF_ADDRESS:
 				sequence_W3AF_ADDRESS(context, (W3AF_ADDRESS) semanticObject); 
 				return; 
@@ -62,6 +59,9 @@ public class ITLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case ITLPackage.W3AF:
 				sequence_W3af(context, (W3af) semanticObject); 
+				return; 
+			case ITLPackage.ZAP:
+				sequence_ZAP(context, (ZAP) semanticObject); 
 				return; 
 			case ITLPackage.ZAP_ADDRESS:
 				sequence_ZAP_ADDRESS(context, (ZAP_ADDRESS) semanticObject); 
@@ -89,37 +89,6 @@ public class ITLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     testing_tool returns Spider
-	 *     Spider returns Spider
-	 *
-	 * Constraint:
-	 *     (name=ID zap_target=ZAP_TARGET zap_address=ZAP_ADDRESS zap_max_depth=ZAP_MAX_DEPTH zap_api_key=ZAP_API_KEY)
-	 */
-	protected void sequence_Spider(ISerializationContext context, Spider semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.TESTING_TOOL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.TESTING_TOOL__NAME));
-			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.SPIDER__ZAP_TARGET) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.SPIDER__ZAP_TARGET));
-			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.SPIDER__ZAP_ADDRESS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.SPIDER__ZAP_ADDRESS));
-			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.SPIDER__ZAP_MAX_DEPTH) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.SPIDER__ZAP_MAX_DEPTH));
-			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.SPIDER__ZAP_API_KEY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.SPIDER__ZAP_API_KEY));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSpiderAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getSpiderAccess().getZap_targetZAP_TARGETParserRuleCall_3_0(), semanticObject.getZap_target());
-		feeder.accept(grammarAccess.getSpiderAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0(), semanticObject.getZap_address());
-		feeder.accept(grammarAccess.getSpiderAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0(), semanticObject.getZap_max_depth());
-		feeder.accept(grammarAccess.getSpiderAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0(), semanticObject.getZap_api_key());
-		feeder.finish();
 	}
 	
 	
@@ -294,6 +263,37 @@ public class ITLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getZAP_TARGETAccess().getNameSTRINGTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     testing_tool returns ZAP
+	 *     ZAP returns ZAP
+	 *
+	 * Constraint:
+	 *     (name=ID zap_target=ZAP_TARGET zap_address=ZAP_ADDRESS zap_max_depth=ZAP_MAX_DEPTH zap_api_key=ZAP_API_KEY)
+	 */
+	protected void sequence_ZAP(ISerializationContext context, ZAP semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.TESTING_TOOL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.TESTING_TOOL__NAME));
+			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.ZAP__ZAP_TARGET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.ZAP__ZAP_TARGET));
+			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.ZAP__ZAP_ADDRESS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.ZAP__ZAP_ADDRESS));
+			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.ZAP__ZAP_MAX_DEPTH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.ZAP__ZAP_MAX_DEPTH));
+			if (transientValues.isValueTransient(semanticObject, ITLPackage.Literals.ZAP__ZAP_API_KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ITLPackage.Literals.ZAP__ZAP_API_KEY));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getZAPAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getZAPAccess().getZap_targetZAP_TARGETParserRuleCall_3_0(), semanticObject.getZap_target());
+		feeder.accept(grammarAccess.getZAPAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0(), semanticObject.getZap_address());
+		feeder.accept(grammarAccess.getZAPAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0(), semanticObject.getZap_max_depth());
+		feeder.accept(grammarAccess.getZAPAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0(), semanticObject.getZap_api_key());
 		feeder.finish();
 	}
 	

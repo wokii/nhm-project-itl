@@ -86,9 +86,9 @@ public class ITLAdapterFactory extends AdapterFactoryImpl
         return createtesting_toolAdapter();
       }
       @Override
-      public Adapter caseSpider(Spider object)
+      public Adapter caseZAP(ZAP object)
       {
-        return createSpiderAdapter();
+        return createZAPAdapter();
       }
       @Override
       public Adapter caseZAP_ADDRESS(ZAP_ADDRESS object)
@@ -188,16 +188,16 @@ public class ITLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link ic.ac.uk.itl.iTL.Spider <em>Spider</em>}'.
+   * Creates a new adapter for an object of class '{@link ic.ac.uk.itl.iTL.ZAP <em>ZAP</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see ic.ac.uk.itl.iTL.Spider
+   * @see ic.ac.uk.itl.iTL.ZAP
    * @generated
    */
-  public Adapter createSpiderAdapter()
+  public Adapter createZAPAdapter()
   {
     return null;
   }

@@ -1,4 +1,4 @@
-# List of external plug-in models previously loaded. Timestamp: 1567111216705
+# List of external plug-in models previously loaded. Timestamp: 1568901527056
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/ch.qos.logback.core_1.0.7.v20121108-1250.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/ch.qos.logback.slf4j_1.0.7.v201505121915.jar
@@ -111,6 +111,9 @@ file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.ecf.provider
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.ecf.provider.filetransfer.httpclient4.ssl_1.1.100.v20180301-0132.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.ecf.provider.filetransfer.ssl_1.0.100.v20180301-0132.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.ecf.ssl_1.2.100.v20180301-0132.jar
+file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.eclemma.core_3.1.2.201903112331.jar
+file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.eclemma.doc_3.1.2.201903112331.jar
+file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.eclemma.ui_3.1.2.201903112331.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.egit_5.3.0.201903130848-r.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.egit.core_5.3.0.201903130848-r.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.egit.doc_5.3.0.201903130848-r.jar
@@ -503,6 +506,9 @@ file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xtext.
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.xtext.xtext.wizard_2.17.0.v20190304-0545.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.gradle.toolingapi_5.0.0.v20181217-1554.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar
+file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.jacoco.agent_0.8.3.v20190219-1601.jar
+file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.jacoco.core_0.8.3.v20190219-1601.jar
+file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.jacoco.report_0.8.3.v20190219-1601.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.12.0.v201504281640/
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit.jupiter.api_5.4.0.v20190212-2109.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit.jupiter.engine_5.4.0.v20190212-2109.jar
@@ -515,6 +521,7 @@ file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit.platform.runne
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit.platform.suite.api_1.4.0.v20190212-2109.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit.vintage.engine_5.4.0.v20190212-2109.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.objectweb.asm_7.0.0.v20181030-2244.jar
+file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.objectweb.asm.commons_7.0.0.v20181030-2244.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.objectweb.asm.tree_7.0.0.v20181030-2244.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.opentest4j_1.1.1.v20190212-2109.jar
 file:/Applications/Eclipse.app/Contents/Eclipse/plugins/org.sat4j.core_2.3.5.v201308161310.jar

@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
 <artifacts size='1'>
-  <artifact classifier='osgi.bundle' id='ic.ac.uk.itl.ui' version='1.0.0.201908292252'>
+  <artifact classifier='osgi.bundle' id='ic.ac.uk.itl.ui' version='1.0.0.201909091851'>
     <properties size='5'>
-      <property name='artifact.size' value='18675'/>
-      <property name='download.size' value='18675'/>
+      <property name='artifact.size' value='18666'/>
+      <property name='download.size' value='18666'/>
       <property name='maven-groupId' value='ic.ac.uk.itl'/>
       <property name='maven-artifactId' value='ic.ac.uk.itl.ui'/>
       <property name='maven-version' value='1.0.0-SNAPSHOT'/>

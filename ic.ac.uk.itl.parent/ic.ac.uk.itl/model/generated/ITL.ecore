@@ -8,7 +8,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="testing_tool">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Spider" eSuperTypes="#//testing_tool">
+  <eClassifiers xsi:type="ecore:EClass" name="ZAP" eSuperTypes="#//testing_tool">
     <eStructuralFeatures xsi:type="ecore:EReference" name="zap_target" eType="#//ZAP_TARGET"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="zap_address" eType="#//ZAP_ADDRESS"

@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
-import ic.ac.uk.itl.iTL.Spider
+import ic.ac.uk.itl.iTL.ZAP
 import ic.ac.uk.itl.iTL.W3af
 import java.io.File
 import java.io.PrintWriter
@@ -29,8 +29,8 @@ class ITLGenerator extends AbstractGenerator {
 		var zap_result = "";
 		var zap_filename = "";
 		var zap_file_path = "";
-		for (spider : resource.allContents.toIterable.filter(Spider)){
-			zap_filename = spider.name
+		for (spider : resource.allContents.toIterable.filter(ZAP)){
+			zap_filename = spider.name;
 			zap_result = spider.compile.toString;
 			zap_file_path = spider.zap_address.name;
 			fsa.generateFile(zap_file_path + zap_filename + ".py", zap_result)
@@ -71,7 +71,7 @@ class ITLGenerator extends AbstractGenerator {
 		}
 		
 	}
-	def compile(Spider spider) {
+	def compile(ZAP spider) {
 		'''
 		#!/usr/bin/env python
 		# A basic ZAP Python API example which spiders and scans a target URL
@@ -96,8 +96,10 @@ class ITLGenerator extends AbstractGenerator {
 		time.sleep(2)
 		
 		print('Spidering target {}'.format(target))
+		
 		scanid = zap.spider.scan(target)
 		zap.spider.set_option_max_depth(«spider.zap_max_depth.name»)
+		
 		# Give the Spider a chance to start
 		time.sleep(2)
 		while (int(zap.spider.status(scanid)) < 100):
@@ -141,7 +143,13 @@ class ITLGenerator extends AbstractGenerator {
 		output config console
 		set verbose true
 		back
-		
+		«IF (w3af.w3af_test_type.name.contains('crawl'))»
+			crawl web_spider
+			crawl config web_spider
+			set only_forward true
+			back
+			
+		«ENDIF»
 		«IF (w3af.w3af_test_type.name.contains('audit'))»
 			audit all
 			audit
@@ -156,12 +164,9 @@ class ITLGenerator extends AbstractGenerator {
 		«ENDIF»
 		«IF (w3af.w3af_test_type.name.contains('bruteforce'))»
 			bruteforce all
-			audit
+			bruteforce
 		«ENDIF»
-		«IF (w3af.w3af_test_type.name.contains('crawl'))»
-			crawl all
-			crawl
-		«ENDIF»
+		
 				
 		back
 		target

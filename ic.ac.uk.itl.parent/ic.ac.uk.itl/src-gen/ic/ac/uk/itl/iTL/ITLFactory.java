@@ -42,13 +42,13 @@ public interface ITLFactory extends EFactory
   testing_tool createtesting_tool();
 
   /**
-   * Returns a new object of class '<em>Spider</em>'.
+   * Returns a new object of class '<em>ZAP</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Spider</em>'.
+   * @return a new object of class '<em>ZAP</em>'.
    * @generated
    */
-  Spider createSpider();
+  ZAP createZAP();
 
   /**
    * Returns a new object of class '<em>ZAP ADDRESS</em>'.

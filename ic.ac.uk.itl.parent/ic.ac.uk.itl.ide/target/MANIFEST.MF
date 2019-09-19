@@ -3,7 +3,7 @@ Automatic-Module-Name: ic.ac.uk.itl.ide
 Bundle-ManifestVersion: 2
 Bundle-Name: ic.ac.uk.itl.ide
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.201908292252
+Bundle-Version: 1.0.0.201909091851
 Bundle-SymbolicName: ic.ac.uk.itl.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: ic.ac.uk.itl,org.eclipse.xtext.ide,org.eclipse.xtext.xba

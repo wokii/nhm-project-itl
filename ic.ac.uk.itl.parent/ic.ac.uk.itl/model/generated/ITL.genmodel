@@ -12,11 +12,11 @@
     <genClasses ecoreClass="ITL.ecore#//testing_tool">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ITL.ecore#//testing_tool/name"/>
     </genClasses>
-    <genClasses ecoreClass="ITL.ecore#//Spider">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//Spider/zap_target"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//Spider/zap_address"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//Spider/zap_max_depth"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//Spider/zap_api_key"/>
+    <genClasses ecoreClass="ITL.ecore#//ZAP">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//ZAP/zap_target"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//ZAP/zap_address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//ZAP/zap_max_depth"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ITL.ecore#//ZAP/zap_api_key"/>
     </genClasses>
     <genClasses ecoreClass="ITL.ecore#//ZAP_ADDRESS">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ITL.ecore#//ZAP_ADDRESS/name"/>

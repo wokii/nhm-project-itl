@@ -1,0 +1,16 @@
+!SESSION 2019-09-09 19:53:15.382 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.3
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /Users/gonewiththewind/eclipse-xtext-itl/ic.ac.uk.itl.parent/ic.ac.uk.itl.ui.tests/target/surefire.properties
+Command-line arguments:  -data /Users/gonewiththewind/eclipse-xtext-itl/ic.ac.uk.itl.parent/ic.ac.uk.itl.ui.tests/target/work/data -application org.eclipse.tycho.surefire.osgibooter.uitest -testproperties /Users/gonewiththewind/eclipse-xtext-itl/ic.ac.uk.itl.parent/ic.ac.uk.itl.ui.tests/target/surefire.properties
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-09 19:53:22.872
+!MESSAGE System property http.nonProxyHosts has been set to 127.0.0.1|192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|localhost|*.localhost by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-09 19:53:22.875
+!MESSAGE System property socksProxyHost has been set to 127.0.0.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2019-09-09 19:53:22.876
+!MESSAGE System property socksProxyPort has been set to 1086 by an external source. This value will be overwritten using the values from the preferences

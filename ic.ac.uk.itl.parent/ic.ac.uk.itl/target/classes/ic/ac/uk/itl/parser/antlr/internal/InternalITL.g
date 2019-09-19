@@ -113,11 +113,11 @@ ruletesting_tool returns [EObject current=null]
 }:
 	(
 		{
-			newCompositeNode(grammarAccess.getTesting_toolAccess().getSpiderParserRuleCall_0());
+			newCompositeNode(grammarAccess.getTesting_toolAccess().getZAPParserRuleCall_0());
 		}
-		this_Spider_0=ruleSpider
+		this_ZAP_0=ruleZAP
 		{
-			$current = $this_Spider_0.current;
+			$current = $this_ZAP_0.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -132,15 +132,15 @@ ruletesting_tool returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleSpider
-entryRuleSpider returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getSpiderRule()); }
-	iv_ruleSpider=ruleSpider
-	{ $current=$iv_ruleSpider.current; }
+// Entry rule entryRuleZAP
+entryRuleZAP returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getZAPRule()); }
+	iv_ruleZAP=ruleZAP
+	{ $current=$iv_ruleZAP.current; }
 	EOF;
 
-// Rule Spider
-ruleSpider returns [EObject current=null]
+// Rule ZAP
+ruleZAP returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -148,19 +148,19 @@ ruleSpider returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='Spider'
+		otherlv_0='ZAP'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getSpiderAccess().getSpiderKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getZAPAccess().getZAPKeyword_0());
 		}
 		(
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getSpiderAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getZAPAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getSpiderRule());
+						$current = createModelElement(grammarAccess.getZAPRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -172,17 +172,17 @@ ruleSpider returns [EObject current=null]
 		)
 		otherlv_2='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getSpiderAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getZAPAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSpiderAccess().getZap_targetZAP_TARGETParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getZAPAccess().getZap_targetZAP_TARGETParserRuleCall_3_0());
 				}
 				lv_zap_target_3_0=ruleZAP_TARGET
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getSpiderRule());
+						$current = createModelElementForParent(grammarAccess.getZAPRule());
 					}
 					set(
 						$current,
@@ -195,17 +195,17 @@ ruleSpider returns [EObject current=null]
 		)
 		otherlv_4=';'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getSpiderAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getZAPAccess().getSemicolonKeyword_4());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSpiderAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getZAPAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0());
 				}
 				lv_zap_address_5_0=ruleZAP_ADDRESS
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getSpiderRule());
+						$current = createModelElementForParent(grammarAccess.getZAPRule());
 					}
 					set(
 						$current,
@@ -218,17 +218,17 @@ ruleSpider returns [EObject current=null]
 		)
 		otherlv_6=';'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getSpiderAccess().getSemicolonKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getZAPAccess().getSemicolonKeyword_6());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSpiderAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getZAPAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0());
 				}
 				lv_zap_max_depth_7_0=ruleZAP_MAX_DEPTH
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getSpiderRule());
+						$current = createModelElementForParent(grammarAccess.getZAPRule());
 					}
 					set(
 						$current,
@@ -241,17 +241,17 @@ ruleSpider returns [EObject current=null]
 		)
 		otherlv_8=';'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getSpiderAccess().getSemicolonKeyword_8());
+			newLeafNode(otherlv_8, grammarAccess.getZAPAccess().getSemicolonKeyword_8());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSpiderAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getZAPAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0());
 				}
 				lv_zap_api_key_9_0=ruleZAP_API_KEY
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getSpiderRule());
+						$current = createModelElementForParent(grammarAccess.getZAPRule());
 					}
 					set(
 						$current,
@@ -265,12 +265,12 @@ ruleSpider returns [EObject current=null]
 		(
 			otherlv_10=';'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getSpiderAccess().getSemicolonKeyword_10());
+				newLeafNode(otherlv_10, grammarAccess.getZAPAccess().getSemicolonKeyword_10());
 			}
 		)?
 		otherlv_11='}'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getSpiderAccess().getRightCurlyBracketKeyword_11());
+			newLeafNode(otherlv_11, grammarAccess.getZAPAccess().getRightCurlyBracketKeyword_11());
 		}
 	)
 ;

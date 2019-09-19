@@ -67,7 +67,7 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
     {
       case ITLPackage.MODEL: return createModel();
       case ITLPackage.TESTING_TOOL: return createtesting_tool();
-      case ITLPackage.SPIDER: return createSpider();
+      case ITLPackage.ZAP: return createZAP();
       case ITLPackage.ZAP_ADDRESS: return createZAP_ADDRESS();
       case ITLPackage.ZAP_MAX_DEPTH: return createZAP_MAX_DEPTH();
       case ITLPackage.ZAP_API_KEY: return createZAP_API_KEY();
@@ -109,10 +109,10 @@ public class ITLFactoryImpl extends EFactoryImpl implements ITLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Spider createSpider()
+  public ZAP createZAP()
   {
-    SpiderImpl spider = new SpiderImpl();
-    return spider;
+    ZAPImpl zap = new ZAPImpl();
+    return zap;
   }
 
   /**

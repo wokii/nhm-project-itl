@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalITLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Spider'", "'{'", "';'", "'}'", "'ZAP_ADDRESS:'", "'ZAP_MAX_DEPTH:'", "'ZAP_API_KEY:'", "'ZAP_TARGET:'", "'W3af'", "'W3AF_REPORT_ADDRESS:'", "'W3AF_ADDRESS:'", "'W3AF_TEST_TYPE:'", "'W3AF_TARGET:'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'ZAP'", "'{'", "';'", "'}'", "'ZAP_ADDRESS:'", "'ZAP_MAX_DEPTH:'", "'ZAP_API_KEY:'", "'ZAP_TARGET:'", "'W3af'", "'W3AF_REPORT_ADDRESS:'", "'W3AF_ADDRESS:'", "'W3AF_TEST_TYPE:'", "'W3AF_TARGET:'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -240,11 +240,11 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruletesting_tool"
-    // InternalITL.g:107:1: ruletesting_tool returns [EObject current=null] : (this_Spider_0= ruleSpider | this_W3af_1= ruleW3af ) ;
+    // InternalITL.g:107:1: ruletesting_tool returns [EObject current=null] : (this_ZAP_0= ruleZAP | this_W3af_1= ruleW3af ) ;
     public final EObject ruletesting_tool() throws RecognitionException {
         EObject current = null;
 
-        EObject this_Spider_0 = null;
+        EObject this_ZAP_0 = null;
 
         EObject this_W3af_1 = null;
 
@@ -253,10 +253,10 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalITL.g:113:2: ( (this_Spider_0= ruleSpider | this_W3af_1= ruleW3af ) )
-            // InternalITL.g:114:2: (this_Spider_0= ruleSpider | this_W3af_1= ruleW3af )
+            // InternalITL.g:113:2: ( (this_ZAP_0= ruleZAP | this_W3af_1= ruleW3af ) )
+            // InternalITL.g:114:2: (this_ZAP_0= ruleZAP | this_W3af_1= ruleW3af )
             {
-            // InternalITL.g:114:2: (this_Spider_0= ruleSpider | this_W3af_1= ruleW3af )
+            // InternalITL.g:114:2: (this_ZAP_0= ruleZAP | this_W3af_1= ruleW3af )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -274,18 +274,18 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalITL.g:115:3: this_Spider_0= ruleSpider
+                    // InternalITL.g:115:3: this_ZAP_0= ruleZAP
                     {
 
-                    			newCompositeNode(grammarAccess.getTesting_toolAccess().getSpiderParserRuleCall_0());
+                    			newCompositeNode(grammarAccess.getTesting_toolAccess().getZAPParserRuleCall_0());
                     		
                     pushFollow(FOLLOW_2);
-                    this_Spider_0=ruleSpider();
+                    this_ZAP_0=ruleZAP();
 
                     state._fsp--;
 
 
-                    			current = this_Spider_0;
+                    			current = this_ZAP_0;
                     			afterParserOrEnumRuleCall();
                     		
 
@@ -331,25 +331,25 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruletesting_tool"
 
 
-    // $ANTLR start "entryRuleSpider"
-    // InternalITL.g:136:1: entryRuleSpider returns [EObject current=null] : iv_ruleSpider= ruleSpider EOF ;
-    public final EObject entryRuleSpider() throws RecognitionException {
+    // $ANTLR start "entryRuleZAP"
+    // InternalITL.g:136:1: entryRuleZAP returns [EObject current=null] : iv_ruleZAP= ruleZAP EOF ;
+    public final EObject entryRuleZAP() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleSpider = null;
+        EObject iv_ruleZAP = null;
 
 
         try {
-            // InternalITL.g:136:47: (iv_ruleSpider= ruleSpider EOF )
-            // InternalITL.g:137:2: iv_ruleSpider= ruleSpider EOF
+            // InternalITL.g:136:44: (iv_ruleZAP= ruleZAP EOF )
+            // InternalITL.g:137:2: iv_ruleZAP= ruleZAP EOF
             {
-             newCompositeNode(grammarAccess.getSpiderRule()); 
+             newCompositeNode(grammarAccess.getZAPRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleSpider=ruleSpider();
+            iv_ruleZAP=ruleZAP();
 
             state._fsp--;
 
-             current =iv_ruleSpider; 
+             current =iv_ruleZAP; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -364,12 +364,12 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleSpider"
+    // $ANTLR end "entryRuleZAP"
 
 
-    // $ANTLR start "ruleSpider"
-    // InternalITL.g:143:1: ruleSpider returns [EObject current=null] : (otherlv_0= 'Spider' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' ) ;
-    public final EObject ruleSpider() throws RecognitionException {
+    // $ANTLR start "ruleZAP"
+    // InternalITL.g:143:1: ruleZAP returns [EObject current=null] : (otherlv_0= 'ZAP' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' ) ;
+    public final EObject ruleZAP() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -393,15 +393,15 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalITL.g:149:2: ( (otherlv_0= 'Spider' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' ) )
-            // InternalITL.g:150:2: (otherlv_0= 'Spider' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' )
+            // InternalITL.g:149:2: ( (otherlv_0= 'ZAP' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' ) )
+            // InternalITL.g:150:2: (otherlv_0= 'ZAP' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' )
             {
-            // InternalITL.g:150:2: (otherlv_0= 'Spider' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' )
-            // InternalITL.g:151:3: otherlv_0= 'Spider' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}'
+            // InternalITL.g:150:2: (otherlv_0= 'ZAP' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}' )
+            // InternalITL.g:151:3: otherlv_0= 'ZAP' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_zap_target_3_0= ruleZAP_TARGET ) ) otherlv_4= ';' ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) ) otherlv_6= ';' ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) ) otherlv_8= ';' ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) ) (otherlv_10= ';' )? otherlv_11= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_4); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getSpiderAccess().getSpiderKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getZAPAccess().getZAPKeyword_0());
             		
             // InternalITL.g:155:3: ( (lv_name_1_0= RULE_ID ) )
             // InternalITL.g:156:4: (lv_name_1_0= RULE_ID )
@@ -411,11 +411,11 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_5); 
 
-            					newLeafNode(lv_name_1_0, grammarAccess.getSpiderAccess().getNameIDTerminalRuleCall_1_0());
+            					newLeafNode(lv_name_1_0, grammarAccess.getZAPAccess().getNameIDTerminalRuleCall_1_0());
             				
 
             					if (current==null) {
-            						current = createModelElement(grammarAccess.getSpiderRule());
+            						current = createModelElement(grammarAccess.getZAPRule());
             					}
             					setWithLastConsumed(
             						current,
@@ -431,7 +431,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
             otherlv_2=(Token)match(input,12,FOLLOW_6); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getSpiderAccess().getLeftCurlyBracketKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getZAPAccess().getLeftCurlyBracketKeyword_2());
             		
             // InternalITL.g:177:3: ( (lv_zap_target_3_0= ruleZAP_TARGET ) )
             // InternalITL.g:178:4: (lv_zap_target_3_0= ruleZAP_TARGET )
@@ -440,7 +440,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
             // InternalITL.g:179:5: lv_zap_target_3_0= ruleZAP_TARGET
             {
 
-            					newCompositeNode(grammarAccess.getSpiderAccess().getZap_targetZAP_TARGETParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getZAPAccess().getZap_targetZAP_TARGETParserRuleCall_3_0());
             				
             pushFollow(FOLLOW_7);
             lv_zap_target_3_0=ruleZAP_TARGET();
@@ -449,7 +449,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getSpiderRule());
+            						current = createModelElementForParent(grammarAccess.getZAPRule());
             					}
             					set(
             						current,
@@ -466,7 +466,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
             otherlv_4=(Token)match(input,13,FOLLOW_8); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getSpiderAccess().getSemicolonKeyword_4());
+            			newLeafNode(otherlv_4, grammarAccess.getZAPAccess().getSemicolonKeyword_4());
             		
             // InternalITL.g:200:3: ( (lv_zap_address_5_0= ruleZAP_ADDRESS ) )
             // InternalITL.g:201:4: (lv_zap_address_5_0= ruleZAP_ADDRESS )
@@ -475,7 +475,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
             // InternalITL.g:202:5: lv_zap_address_5_0= ruleZAP_ADDRESS
             {
 
-            					newCompositeNode(grammarAccess.getSpiderAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0());
+            					newCompositeNode(grammarAccess.getZAPAccess().getZap_addressZAP_ADDRESSParserRuleCall_5_0());
             				
             pushFollow(FOLLOW_7);
             lv_zap_address_5_0=ruleZAP_ADDRESS();
@@ -484,7 +484,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getSpiderRule());
+            						current = createModelElementForParent(grammarAccess.getZAPRule());
             					}
             					set(
             						current,
@@ -501,7 +501,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
             otherlv_6=(Token)match(input,13,FOLLOW_9); 
 
-            			newLeafNode(otherlv_6, grammarAccess.getSpiderAccess().getSemicolonKeyword_6());
+            			newLeafNode(otherlv_6, grammarAccess.getZAPAccess().getSemicolonKeyword_6());
             		
             // InternalITL.g:223:3: ( (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH ) )
             // InternalITL.g:224:4: (lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH )
@@ -510,7 +510,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
             // InternalITL.g:225:5: lv_zap_max_depth_7_0= ruleZAP_MAX_DEPTH
             {
 
-            					newCompositeNode(grammarAccess.getSpiderAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0());
+            					newCompositeNode(grammarAccess.getZAPAccess().getZap_max_depthZAP_MAX_DEPTHParserRuleCall_7_0());
             				
             pushFollow(FOLLOW_7);
             lv_zap_max_depth_7_0=ruleZAP_MAX_DEPTH();
@@ -519,7 +519,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getSpiderRule());
+            						current = createModelElementForParent(grammarAccess.getZAPRule());
             					}
             					set(
             						current,
@@ -536,7 +536,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
             otherlv_8=(Token)match(input,13,FOLLOW_10); 
 
-            			newLeafNode(otherlv_8, grammarAccess.getSpiderAccess().getSemicolonKeyword_8());
+            			newLeafNode(otherlv_8, grammarAccess.getZAPAccess().getSemicolonKeyword_8());
             		
             // InternalITL.g:246:3: ( (lv_zap_api_key_9_0= ruleZAP_API_KEY ) )
             // InternalITL.g:247:4: (lv_zap_api_key_9_0= ruleZAP_API_KEY )
@@ -545,7 +545,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
             // InternalITL.g:248:5: lv_zap_api_key_9_0= ruleZAP_API_KEY
             {
 
-            					newCompositeNode(grammarAccess.getSpiderAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0());
+            					newCompositeNode(grammarAccess.getZAPAccess().getZap_api_keyZAP_API_KEYParserRuleCall_9_0());
             				
             pushFollow(FOLLOW_11);
             lv_zap_api_key_9_0=ruleZAP_API_KEY();
@@ -554,7 +554,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getSpiderRule());
+            						current = createModelElementForParent(grammarAccess.getZAPRule());
             					}
             					set(
             						current,
@@ -582,7 +582,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
                     {
                     otherlv_10=(Token)match(input,13,FOLLOW_12); 
 
-                    				newLeafNode(otherlv_10, grammarAccess.getSpiderAccess().getSemicolonKeyword_10());
+                    				newLeafNode(otherlv_10, grammarAccess.getZAPAccess().getSemicolonKeyword_10());
                     			
 
                     }
@@ -592,7 +592,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
 
             otherlv_11=(Token)match(input,14,FOLLOW_2); 
 
-            			newLeafNode(otherlv_11, grammarAccess.getSpiderAccess().getRightCurlyBracketKeyword_11());
+            			newLeafNode(otherlv_11, grammarAccess.getZAPAccess().getRightCurlyBracketKeyword_11());
             		
 
             }
@@ -613,7 +613,7 @@ public class InternalITLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleSpider"
+    // $ANTLR end "ruleZAP"
 
 
     // $ANTLR start "entryRuleZAP_ADDRESS"

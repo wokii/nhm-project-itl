@@ -40,26 +40,26 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 	public class Testing_toolElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ic.ac.uk.itl.ITL.testing_tool");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cSpiderParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cZAPParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cW3afParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//testing_tool:
-		//	Spider | W3af;
+		//	ZAP | W3af;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Spider | W3af
+		//ZAP | W3af
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//Spider
-		public RuleCall getSpiderParserRuleCall_0() { return cSpiderParserRuleCall_0; }
+		//ZAP
+		public RuleCall getZAPParserRuleCall_0() { return cZAPParserRuleCall_0; }
 		
 		//W3af
 		public RuleCall getW3afParserRuleCall_1() { return cW3afParserRuleCall_1; }
 	}
-	public class SpiderElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ic.ac.uk.itl.ITL.Spider");
+	public class ZAPElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ic.ac.uk.itl.ITL.ZAP");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cSpiderKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cZAPKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
@@ -77,17 +77,20 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//Spider:
-		//	'Spider' name=ID '{' zap_target=ZAP_TARGET ';' zap_address=ZAP_ADDRESS ';' zap_max_depth=ZAP_MAX_DEPTH ';'
+		//ZAP:
+		//	'ZAP' name=ID '{'
+		//	zap_target=ZAP_TARGET ';'
+		//	zap_address=ZAP_ADDRESS ';'
+		//	zap_max_depth=ZAP_MAX_DEPTH ';'
 		//	zap_api_key=ZAP_API_KEY ';'? '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Spider' name=ID '{' zap_target=ZAP_TARGET ';' zap_address=ZAP_ADDRESS ';' zap_max_depth=ZAP_MAX_DEPTH ';'
+		//'ZAP' name=ID '{' zap_target=ZAP_TARGET ';' zap_address=ZAP_ADDRESS ';' zap_max_depth=ZAP_MAX_DEPTH ';'
 		//zap_api_key=ZAP_API_KEY ';'? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//'Spider'
-		public Keyword getSpiderKeyword_0() { return cSpiderKeyword_0; }
+		//'ZAP'
+		public Keyword getZAPKeyword_0() { return cZAPKeyword_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -251,8 +254,11 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//W3af:
-		//	'W3af' name=ID '{' w3af_test_type=W3AF_TEST_TYPE ';' w3af_address=W3AF_ADDRESS ';'
-		//	w3af_report_path=W3AF_REPORT_ADDRESS ';' w3af_target=W3AF_TARGET ';'? '}';
+		//	'W3af' name=ID
+		//	'{' w3af_test_type=W3AF_TEST_TYPE ';'
+		//	w3af_address=W3AF_ADDRESS ';'
+		//	w3af_report_path=W3AF_REPORT_ADDRESS ';'
+		//	w3af_target=W3AF_TARGET ';'? '}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'W3af' name=ID '{' w3af_test_type=W3AF_TEST_TYPE ';' w3af_address=W3AF_ADDRESS ';' w3af_report_path=W3AF_REPORT_ADDRESS
@@ -406,7 +412,7 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private final ModelElements pModel;
 	private final Testing_toolElements pTesting_tool;
-	private final SpiderElements pSpider;
+	private final ZAPElements pZAP;
 	private final ZAP_ADDRESSElements pZAP_ADDRESS;
 	private final ZAP_MAX_DEPTHElements pZAP_MAX_DEPTH;
 	private final ZAP_API_KEYElements pZAP_API_KEY;
@@ -428,7 +434,7 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
 		this.pTesting_tool = new Testing_toolElements();
-		this.pSpider = new SpiderElements();
+		this.pZAP = new ZAPElements();
 		this.pZAP_ADDRESS = new ZAP_ADDRESSElements();
 		this.pZAP_MAX_DEPTH = new ZAP_MAX_DEPTHElements();
 		this.pZAP_API_KEY = new ZAP_API_KEYElements();
@@ -478,7 +484,7 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//testing_tool:
-	//	Spider | W3af;
+	//	ZAP | W3af;
 	public Testing_toolElements getTesting_toolAccess() {
 		return pTesting_tool;
 	}
@@ -487,15 +493,18 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 		return getTesting_toolAccess().getRule();
 	}
 	
-	//Spider:
-	//	'Spider' name=ID '{' zap_target=ZAP_TARGET ';' zap_address=ZAP_ADDRESS ';' zap_max_depth=ZAP_MAX_DEPTH ';'
+	//ZAP:
+	//	'ZAP' name=ID '{'
+	//	zap_target=ZAP_TARGET ';'
+	//	zap_address=ZAP_ADDRESS ';'
+	//	zap_max_depth=ZAP_MAX_DEPTH ';'
 	//	zap_api_key=ZAP_API_KEY ';'? '}';
-	public SpiderElements getSpiderAccess() {
-		return pSpider;
+	public ZAPElements getZAPAccess() {
+		return pZAP;
 	}
 	
-	public ParserRule getSpiderRule() {
-		return getSpiderAccess().getRule();
+	public ParserRule getZAPRule() {
+		return getZAPAccess().getRule();
 	}
 	
 	//ZAP_ADDRESS:
@@ -539,8 +548,11 @@ public class ITLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//W3af:
-	//	'W3af' name=ID '{' w3af_test_type=W3AF_TEST_TYPE ';' w3af_address=W3AF_ADDRESS ';'
-	//	w3af_report_path=W3AF_REPORT_ADDRESS ';' w3af_target=W3AF_TARGET ';'? '}';
+	//	'W3af' name=ID
+	//	'{' w3af_test_type=W3AF_TEST_TYPE ';'
+	//	w3af_address=W3AF_ADDRESS ';'
+	//	w3af_report_path=W3AF_REPORT_ADDRESS ';'
+	//	w3af_target=W3AF_TARGET ';'? '}';
 	public W3afElements getW3afAccess() {
 		return pW3af;
 	}

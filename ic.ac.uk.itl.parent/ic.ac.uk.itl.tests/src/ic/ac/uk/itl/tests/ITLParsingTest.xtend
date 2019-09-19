@@ -11,12 +11,211 @@ import org.eclipse.xtext.testing.util.ParseHelper
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.^extension.ExtendWith
+import ic.ac.uk.itl.iTL.ZAP
+import ic.ac.uk.itl.iTL.W3af
+import org.eclipse.xtext.xbase.testing.CompilationTestHelper
+
 
 @ExtendWith(InjectionExtension)
 @InjectWith(ITLInjectorProvider)
 class ITLParsingTest {
 	@Inject
 	ParseHelper<Model> parseHelper
-	
-	
+	@Inject extension CompilationTestHelper
+	@Test
+	def void loadModel1() {
+		val result = parseHelper.parse('''
+			ZAP spider234ee1 {
+				ZAP_TARGET: "http://wokii.github.io";
+				ZAP_ADDRESS: "";
+				ZAP_MAX_DEPTH: 1; 
+				ZAP_API_KEY: "ne61duaiac6dmbuqldosn35ocl"
+				
+			}
+		''')
+		
+		val zap = result.testing_tools.get(0) as ZAP;
+		
+		println((zap as ZAP).getName());
+		//println(result);
+		Assertions.assertNotNull(result);
+		
+		val zap_target = zap.zap_target.getName()
+		val zap_address = zap.zap_address.getName();
+		val zap_max_depth = zap.zap_max_depth.getName();
+		val zap_api_key = zap.zap_api_key.getName();
+//		
+//		
+		Assertions.assertEquals("spider234ee1", zap.name)
+		Assertions.assertEquals("http://wokii.github.io", zap_target)
+		Assertions.assertEquals("", zap_address)
+		Assertions.assertEquals(1, zap_max_depth)
+		Assertions.assertEquals("ne61duaiac6dmbuqldosn35ocl", zap_api_key)
+//		
+		val errors = result.eResource.errors
+		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
+	}
+	@Test
+	def void loadModel2() {
+		val result = parseHelper.parse('''
+			W3af w3af1 {
+				W3AF_TEST_TYPE: "audit,auth";
+				W3AF_ADDRESS: "/Users/gonewiththewind/nhm_generateded/";
+				W3AF_REPORT_ADDRESS: "/Users/gonewiththewind/nhm_generated/";
+			
+				W3AF_TARGET: "http://wokii.github.io"
+			}
+		''')
+		val w3af = result.testing_tools.get(0) as W3af;
+		
+		println(w3af.getName());
+		//println(result);
+		Assertions.assertNotNull(result);
+		
+		//val zap_target = zap.zap_target.getName()
+		val w3af_test_type = w3af.w3af_test_type.getName();
+		val w3af_address = w3af.w3af_address.getName();
+		val w3af_report_address = w3af.w3af_report_path.getName();
+		val w3af_target = w3af.w3af_target.getName();
+
+//		
+		Assertions.assertNotNull(result)
+		Assertions.assertEquals("/Users/gonewiththewind/nhm_generateded/", w3af_address)
+		Assertions.assertEquals("/Users/gonewiththewind/nhm_generated/", w3af_report_address)
+		Assertions.assertEquals("audit,auth", w3af_test_type)
+		Assertions.assertEquals("w3af1", w3af.name)
+		Assertions.assertEquals("http://wokii.github.io", w3af_target)
+		
+//		
+		val errors = result.eResource.errors
+		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
+	}
+	@Test
+	def void testGenerator() {
+		'''
+			ZAP spider234ee1 {
+				ZAP_TARGET: "http://wokii.github.io";
+				ZAP_ADDRESS: "/Users/gonewiththewind/nhm_generated/";
+				ZAP_MAX_DEPTH: 1; 
+				ZAP_API_KEY: "ne61duaiac6dmbuqldosn35ocl"
+				
+			}
+		'''.assertCompilesTo('''
+		#!/usr/bin/env python
+		# A basic ZAP Python API example which spiders and scans a target URL
+		
+		import time
+		from pprint import pprint
+		from zapv2 import ZAPv2
+		# use pip install python-owasp-zap-v2.4 to install python api client in order to run this script
+		
+		target = "http://wokii.github.io"
+		apikey = "ne61duaiac6dmbuqldosn35ocl" # Change to match the API key set in ZAP, or use None if the API key is disabled
+		#
+		# By default ZAP API client will connect to port 8080
+		zap = ZAPv2(apikey=apikey)
+		# Use the line below if ZAP is not listening on port 8080, for example, if listening on port 8090
+		#zap = ZAPv2(apikey=apikey, proxies={'http': target+':'+str(8080), 'https': target+':'+str(8080)})
+		
+		# Proxy a request to the target so that ZAP has something to deal with
+		print('Accessing target {}'.format(target))
+		zap.urlopen(target)
+		# Give the sites tree a chance to get updated
+		time.sleep(2)
+		
+		print('Spidering target {}'.format(target))
+		
+		scanid = zap.spider.scan(target)
+		zap.spider.set_option_max_depth(1)
+		
+		# Give the Spider a chance to start
+		time.sleep(2)
+		while (int(zap.spider.status(scanid)) < 100):
+		    # Loop until the spider has finished
+		    print('Spider progress %: {}'.format(zap.spider.status(scanid)))
+		    time.sleep(2)
+		
+		print ('Spider completed')
+		
+		while (int(zap.pscan.records_to_scan) > 0):
+		      print ('Records to passive scan : {}'.format(zap.pscan.records_to_scan))
+		      time.sleep(2)
+		
+		print ('Passive Scan completed')
+		
+		print ('Active Scanning target {}'.format(target))
+		scanid = zap.ascan.scan(target)
+		while (int(zap.ascan.status(scanid)) < 100):
+		    # Loop until the scanner has finished
+		    print ('Scan progress %: {}'.format(zap.ascan.status(scanid)))
+		    time.sleep(5)
+		
+		print ('Active Scan completed')
+		
+		# Report the results
+		
+		print ('Hosts: {}'.format(', '.join(zap.core.hosts)))
+		print ('Alerts: ')
+		pprint (zap.core.alerts())
+		''');
+	}
+	@Test
+	def void testGenerator2() {
+		'''
+		W3af w3af1 {
+			W3AF_TEST_TYPE: "audit,auth";
+			W3AF_ADDRESS: "/Users/gonewiththewind/nhm_generateded/";
+			W3AF_REPORT_ADDRESS: "/Users/gonewiththewind/nhm_generated/";
+			W3AF_TARGET: "http://wokii.github.io"
+		}
+		'''.assertCompilesTo('''
+		plugins
+		output console, html_file
+		output
+		output config html_file
+		set verbose true
+		back
+		
+		output config console
+		set verbose true
+		back
+		audit all
+		audit
+		auth all
+		auth
+		
+				
+		back
+		target
+		set target http://wokii.github.io
+		
+		back
+		start
+		
+		exit
+		''')
+	}
+	@Test
+	def void both() {
+		val result = parseHelper.parse('''
+			ZAP spider234ee1 {
+				ZAP_TARGET: "http://wokii.github.io";
+				ZAP_ADDRESS: "/Users/gonewiththewind/nhm_generateded/";
+				ZAP_MAX_DEPTH: 1; 
+				ZAP_API_KEY: "ne61duaiac6dmbuqldosn35ocl"
+				
+			}
+			W3af w3af1 {
+				W3AF_TEST_TYPE: "audit,auth";
+				W3AF_ADDRESS: "/Users/gonewiththewind/nhm_generateded/";
+				W3AF_REPORT_ADDRESS: "/Users/gonewiththewind/nhm_generated/";
+			
+				W3AF_TARGET: "http://wokii.github.io"
+			}
+		''')
+		Assertions.assertNotNull(result)
+		val errors = result.eResource.errors
+		println(errors)
+		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
+	}
 }

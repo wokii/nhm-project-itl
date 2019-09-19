@@ -6,7 +6,6 @@ package ic.ac.uk.itl.iTL.impl;
 import ic.ac.uk.itl.iTL.ITLFactory;
 import ic.ac.uk.itl.iTL.ITLPackage;
 import ic.ac.uk.itl.iTL.Model;
-import ic.ac.uk.itl.iTL.Spider;
 import ic.ac.uk.itl.iTL.W3af;
 import ic.ac.uk.itl.iTL.testing_tool;
 
@@ -44,7 +43,7 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass spiderEClass = null;
+  private EClass zapEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -217,9 +216,9 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSpider()
+  public EClass getZAP()
   {
-    return spiderEClass;
+    return zapEClass;
   }
 
   /**
@@ -227,9 +226,9 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSpider_Zap_target()
+  public EReference getZAP_Zap_target()
   {
-    return (EReference)spiderEClass.getEStructuralFeatures().get(0);
+    return (EReference)zapEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -237,9 +236,9 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSpider_Zap_address()
+  public EReference getZAP_Zap_address()
   {
-    return (EReference)spiderEClass.getEStructuralFeatures().get(1);
+    return (EReference)zapEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -247,9 +246,9 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSpider_Zap_max_depth()
+  public EReference getZAP_Zap_max_depth()
   {
-    return (EReference)spiderEClass.getEStructuralFeatures().get(2);
+    return (EReference)zapEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -257,9 +256,9 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getSpider_Zap_api_key()
+  public EReference getZAP_Zap_api_key()
   {
-    return (EReference)spiderEClass.getEStructuralFeatures().get(3);
+    return (EReference)zapEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -508,11 +507,11 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
     testing_toolEClass = createEClass(TESTING_TOOL);
     createEAttribute(testing_toolEClass, TESTING_TOOL__NAME);
 
-    spiderEClass = createEClass(SPIDER);
-    createEReference(spiderEClass, SPIDER__ZAP_TARGET);
-    createEReference(spiderEClass, SPIDER__ZAP_ADDRESS);
-    createEReference(spiderEClass, SPIDER__ZAP_MAX_DEPTH);
-    createEReference(spiderEClass, SPIDER__ZAP_API_KEY);
+    zapEClass = createEClass(ZAP);
+    createEReference(zapEClass, ZAP__ZAP_TARGET);
+    createEReference(zapEClass, ZAP__ZAP_ADDRESS);
+    createEReference(zapEClass, ZAP__ZAP_MAX_DEPTH);
+    createEReference(zapEClass, ZAP__ZAP_API_KEY);
 
     zaP_ADDRESSEClass = createEClass(ZAP_ADDRESS);
     createEAttribute(zaP_ADDRESSEClass, ZAP_ADDRESS__NAME);
@@ -574,7 +573,7 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    spiderEClass.getESuperTypes().add(this.gettesting_tool());
+    zapEClass.getESuperTypes().add(this.gettesting_tool());
     w3afEClass.getESuperTypes().add(this.gettesting_tool());
 
     // Initialize classes and features; add operations and parameters
@@ -584,11 +583,11 @@ public class ITLPackageImpl extends EPackageImpl implements ITLPackage
     initEClass(testing_toolEClass, testing_tool.class, "testing_tool", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(gettesting_tool_Name(), ecorePackage.getEString(), "name", null, 0, 1, testing_tool.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(spiderEClass, Spider.class, "Spider", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getSpider_Zap_target(), this.getZAP_TARGET(), null, "zap_target", null, 0, 1, Spider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSpider_Zap_address(), this.getZAP_ADDRESS(), null, "zap_address", null, 0, 1, Spider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSpider_Zap_max_depth(), this.getZAP_MAX_DEPTH(), null, "zap_max_depth", null, 0, 1, Spider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getSpider_Zap_api_key(), this.getZAP_API_KEY(), null, "zap_api_key", null, 0, 1, Spider.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(zapEClass, ic.ac.uk.itl.iTL.ZAP.class, "ZAP", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getZAP_Zap_target(), this.getZAP_TARGET(), null, "zap_target", null, 0, 1, ic.ac.uk.itl.iTL.ZAP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getZAP_Zap_address(), this.getZAP_ADDRESS(), null, "zap_address", null, 0, 1, ic.ac.uk.itl.iTL.ZAP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getZAP_Zap_max_depth(), this.getZAP_MAX_DEPTH(), null, "zap_max_depth", null, 0, 1, ic.ac.uk.itl.iTL.ZAP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getZAP_Zap_api_key(), this.getZAP_API_KEY(), null, "zap_api_key", null, 0, 1, ic.ac.uk.itl.iTL.ZAP.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(zaP_ADDRESSEClass, ic.ac.uk.itl.iTL.ZAP_ADDRESS.class, "ZAP_ADDRESS", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getZAP_ADDRESS_Name(), ecorePackage.getEString(), "name", null, 0, 1, ic.ac.uk.itl.iTL.ZAP_ADDRESS.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

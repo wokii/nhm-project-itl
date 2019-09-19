@@ -20,14 +20,14 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class ITLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected ITLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Spider_SemicolonKeyword_10_q;
 	protected AbstractElementAlias match_W3af_SemicolonKeyword_10_q;
+	protected AbstractElementAlias match_ZAP_SemicolonKeyword_10_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (ITLGrammarAccess) access;
-		match_Spider_SemicolonKeyword_10_q = new TokenAlias(false, true, grammarAccess.getSpiderAccess().getSemicolonKeyword_10());
 		match_W3af_SemicolonKeyword_10_q = new TokenAlias(false, true, grammarAccess.getW3afAccess().getSemicolonKeyword_10());
+		match_ZAP_SemicolonKeyword_10_q = new TokenAlias(false, true, grammarAccess.getZAPAccess().getSemicolonKeyword_10());
 	}
 	
 	@Override
@@ -42,10 +42,10 @@ public class ITLSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Spider_SemicolonKeyword_10_q.equals(syntax))
-				emit_Spider_SemicolonKeyword_10_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_W3af_SemicolonKeyword_10_q.equals(syntax))
+			if (match_W3af_SemicolonKeyword_10_q.equals(syntax))
 				emit_W3af_SemicolonKeyword_10_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_ZAP_SemicolonKeyword_10_q.equals(syntax))
+				emit_ZAP_SemicolonKeyword_10_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -55,9 +55,9 @@ public class ITLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ';'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     zap_api_key=ZAP_API_KEY (ambiguity) '}' (rule end)
+	 *     w3af_target=W3AF_TARGET (ambiguity) '}' (rule end)
 	 */
-	protected void emit_Spider_SemicolonKeyword_10_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_W3af_SemicolonKeyword_10_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -66,9 +66,9 @@ public class ITLSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ';'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     w3af_target=W3AF_TARGET (ambiguity) '}' (rule end)
+	 *     zap_api_key=ZAP_API_KEY (ambiguity) '}' (rule end)
 	 */
-	protected void emit_W3af_SemicolonKeyword_10_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ZAP_SemicolonKeyword_10_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
