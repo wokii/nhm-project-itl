@@ -24,7 +24,7 @@ Use
 ```
 mvn clean verify
 ```
-to build the project, then deploy the .war file inside "nhm-project-itl/ic.ac.uk.itl.parent/ic.ac.uk.itl.web/target/" in the tomcat server.
+to build the project, then deploy the .war file inside "nhm-project-itl/ic.ac.uk.itl.parent/ic.ac.uk.itl.web/target/" to the tomcat server.
 
 
 
