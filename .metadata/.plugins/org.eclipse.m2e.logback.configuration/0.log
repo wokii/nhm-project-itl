@@ -496,3 +496,5 @@
 2019-09-12 07:06:32,349 [Worker-25: Launching ServerLauncher] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ic.ac.uk.itl: ic.ac.uk.itl:ic.ac.uk.itl:1.0.0-SNAPSHOT with classifier null to /ic.ac.uk.itl/target/classes
 2019-09-12 07:06:32,350 [Worker-25: Launching ServerLauncher] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ic.ac.uk.itl.ide: ic.ac.uk.itl:ic.ac.uk.itl.ide:1.0.0-SNAPSHOT with classifier null to /ic.ac.uk.itl.ide/target/classes
 2019-09-19 14:58:53,439 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-09-19 15:09:32,168 [Worker-6: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ic.ac.uk.itl: ic.ac.uk.itl:ic.ac.uk.itl:1.0.0-SNAPSHOT with classifier  to /ic.ac.uk.itl/target/classes
+2019-09-19 15:09:32,170 [Worker-6: Building workspace] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/ic.ac.uk.itl.ide: ic.ac.uk.itl:ic.ac.uk.itl.ide:1.0.0-SNAPSHOT with classifier  to /ic.ac.uk.itl.ide/target/classes

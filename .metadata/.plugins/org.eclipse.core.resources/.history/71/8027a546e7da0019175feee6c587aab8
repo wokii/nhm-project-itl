@@ -17,7 +17,7 @@ class ItlServiceDispatcher extends XtextServiceDispatcher {
     
     @Inject
     GeneratorService generatorService;
-	val W3AF_PATH = "/Users/gonewiththewind/w3af/w3af/w3af_console";
+
     override protected createServiceDescriptor(String serviceType, IServiceContext context) {
         switch serviceType {
            
@@ -52,7 +52,7 @@ class ItlServiceDispatcher extends XtextServiceDispatcher {
 					} else if (typeId =='w3af') {
 						cmd =newArrayList("/bin/bash", "-c", "export PATH=/usr/local/bin:$PATH"+
 						"&& echo $PATH"+ 
-						"&& "+ W3AF_PATH +" -s" + scriptId);
+						"&& /Users/gonewiththewind/w3af/w3af/w3af_console -s" + scriptId);
 						//cmd=newArrayList("/bin/bash", "-c", "/Users/gonewiththewind/w3af/w3af/w3af_console -s "+scriptId);
 					}
 					println(cmd);

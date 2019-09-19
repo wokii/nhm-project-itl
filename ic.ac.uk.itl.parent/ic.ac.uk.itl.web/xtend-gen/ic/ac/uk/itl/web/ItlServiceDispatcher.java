@@ -30,6 +30,8 @@ public class ItlServiceDispatcher extends XtextServiceDispatcher {
   @Inject
   private GeneratorService generatorService;
   
+  private final String W3AF_PATH = "/Users/gonewiththewind/w3af/w3af/w3af_console";
+  
   @Override
   protected XtextServiceDispatcher.ServiceDescriptor createServiceDescriptor(final String serviceType, final IServiceContext context) {
     XtextServiceDispatcher.ServiceDescriptor _switchResult = null;
@@ -75,9 +77,9 @@ public class ItlServiceDispatcher extends XtextServiceDispatcher {
             } else {
               boolean _equals_1 = Objects.equal(typeId, "w3af");
               if (_equals_1) {
-                cmd = CollectionLiterals.<String>newArrayList("/bin/bash", "-c", ((("export PATH=/usr/local/bin:$PATH" + 
+                cmd = CollectionLiterals.<String>newArrayList("/bin/bash", "-c", ((((("export PATH=/usr/local/bin:$PATH" + 
                   "&& echo $PATH") + 
-                  "&& /Users/gonewiththewind/w3af/w3af/w3af_console -s") + scriptId));
+                  "&& ") + this.W3AF_PATH) + " -s") + scriptId));
               }
             }
             InputOutput.<ArrayList<String>>println(cmd);
