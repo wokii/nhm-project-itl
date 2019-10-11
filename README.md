@@ -26,5 +26,9 @@ mvn clean verify
 ```
 to build the project, then deploy the .war file inside "nhm-project-itl/ic.ac.uk.itl.parent/ic.ac.uk.itl.web/target/" to the tomcat server.
 
+### Tomcat Server on Wep-zap-1
+
+Tomcat server was deployed on port 8081 on web-zap-1.
+
 
 
